@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rounded&height=300&color=gradient&text=Work%20in%20Progress" />
+</p>
+<h1 align="center"> Hello! I'm sorry! Working on that! </h1>
+
+<!------------------------------------------------------------------------------------------------------------------
 <a name="readme-top"></a>
 <div align="center">
 <h1>libft 📔</h1>
@@ -17,7 +23,7 @@ ___
 <h3 align=center>Table o´Contents</h3>
 
 <!-- mtoc-start -->
-
+<!----------------- >
 * [About 📌](#about-)
 * [Usage](#usage)
 * [Setup & Compilation 🖇️](#setup--compilation-)
@@ -30,7 +36,7 @@ ___
 <div/>
 
 
-
+<!------------------------  >
 <div align=left>
 
 # About 📌
