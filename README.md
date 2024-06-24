@@ -16,10 +16,10 @@
 
 <!-- mtoc-start -->
 
-* [About](#about-)
-* [Concepts!](#concepts)
-* [Preprocessors](#preprocessors)
-* [Makefile rules 🔧](#makefile-rules-)
+* [About](#-about-)
+* [Concepts!](#-concepts-)
+* [Preprocessors](#preprocessors-)
+* 	[About Libraries... again](#about-libraries...-again)
 * [Implementation](#implementation)
   * [License](#license)
 
@@ -81,6 +81,8 @@ The preprocessor statements in C are called directives. A preprocessor section o
 
 The following [table](https://www.tutorialspoint.com/cprogramming/c_preprocessors.htm) lists down all the important preprocessor directives
 
+<div align="center">
+	
 | Directive	| Description |
 -------------- | ---------------
 | # define |	Substitutes a preprocessor macro.|
@@ -95,6 +97,7 @@ The following [table](https://www.tutorialspoint.com/cprogramming/c_preprocessor
 | #error	|	Prints error message on stderr.
 | #pragma	|	Issues special commands to the compiler, using a standardized method.
 
+</div>
 <h3> About Libraries... again </h3>
 The C language allows us to create our own library. In it, we can place our functions, structures, etc., which makes it more practical and easier to use in other projects.
 
