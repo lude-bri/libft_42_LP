@@ -19,8 +19,13 @@
 * [About](#-about-)
 * [Concepts!](#-concepts-)
 * [Preprocessors](#-preprocessors-)
-* 	[About Libraries... again](#about-libraries...-again)
-* [Implementation](#implementation)
+	* [Preprocessor Directives in C](#-preprocessor-directives-in-c-)
+	* [About Libraries... again](#-about-libraries-again-)
+ * [Building our first C Library](#building-our-first-c-library)
+   	* [1. The Preprocessor Directives for Libft](#-1-the-preprocessor-directives-for-libft-)
+   	* [2. The Functions](#-2-the-functions-)
+   	* [3. Makefile](#-3-makefile-)
+ * [Finally](#-finally-)
   * [License](#license)
 
 </div>
