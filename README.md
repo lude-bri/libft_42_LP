@@ -1,7 +1,7 @@
 <!--------------------------------
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rounded&height=300&color=gradient&text=Work%20in%20Progress" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=0ABAB5&text=Good%20Job!&section=footer&fontColor=fcf3f2&fontAlignY=46" />
 </p>
 <h1 align="center"> Hello! I'm sorry! Working on that! </h1>
 ----->
@@ -596,6 +596,10 @@ Ok! Now that you know what a library is and how to build it, it is your chance t
 Makefiles, on the other hand, streamline the build process by automating the compilation and linking stages. They ensure that only the necessary parts of a project are rebuilt, saving time and reducing the potential for errors. With the ability to define dependencies and custom build rules, Makefiles are powerful tools for managing complex projects!! <br>
 
 Together, the use of libraries and Makefiles can significantly enhance the development workflow, leading to more robust and scalable software solutions. By mastering these tools, software engineers and developers can improve their productivity and ensure their code is both efficient and maintainable. <br>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=150&color=0ABAB5&text=Good%20Job!&section=footer&fontColor=fcf3f2&fontAlignY=46" />
+</p>
 
 ### License
 
