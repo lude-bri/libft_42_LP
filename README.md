@@ -41,10 +41,24 @@ Those swiches doesn't understand `while` or `if/else`, only understands zeros an
 
 In short:
 
-_Libaries consist of a set of related functions to perform a common task. Standard system libraries are usually found in `/lib` and `/usr/lib/` directories._ [(source)](https://www.cs.dartmouth.edu/~campbell/cs50/buildlib.html)
+> _Libaries consist of a set of related functions to perform a common task. Standard system libraries are usually found in `/lib` and `/usr/lib/` directories._ [(source)](https://www.cs.dartmouth.edu/~campbell/cs50/buildlib.html)
 
-Basically, whenever we use `#include`, we are informing to the computer to lookup that standard library (or dictionary, in our analogy) and read the following code accordingly to the signs defined by the library!
+Uma biblioteca is um arquitvo contando um conjunto de funcoes (pedacos de codigo), variaveis, macros etc., ja implementados, e que podem ser utilizados pelo programador em seu programa
 
+Basically, whenever we use `#include`, we are informing para o preprocessador tratar o conteudo de um arquivo especificado. Em outras palavras, dizemos ao computer to lookup that standard library (or dictionary, in our analogy) and read the following code accordingly to the rules defined by the library!
+
+O comando `#include` permite duas sintaxes:
+<ul>
+ 	<li> #include < library_name >: o preprocessor vai buscar pela bilbioteca nos caminhos de procura pre-especificados do compilador. Usamos essa sintaxe quando estamos incluindo uma bilbioteca que e propria do sistema, como <stdio.h> e <stdlib.h> </li>
+   	<li>#include "library_name" : o preprocessor procurara pela biblioteca no mesmo diretorio onde se encontra o nosso programa. Podemos ainda optar por informar o nome do arquivo com o caminho completo, ou seja, em qual diretorio ele se encontra e como chegar la </li>
+	</ul>
+
+> de modo geral, os arquivos de bibliotecas na linguagem C sao terminados com a extensao .h
+
+Exemplo de uso o `#include`
+<ul>
+	<li</li>
+</ul>
 But when we create our own library, how does it works? Well, let's talk about the preprocessors!
 
 -----
