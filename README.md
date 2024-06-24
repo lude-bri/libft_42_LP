@@ -16,9 +16,9 @@
 
 <!-- mtoc-start -->
 
-* [About 📌](#about-)
-* [Usage](#usage)
-* [Setup & Compilation 🖇️](#setup--compilation-)
+* [About](#about-)
+* [Concepts!](#concepts)
+* [Preprocessors](#preprocessors)
 * [Makefile rules 🔧](#makefile-rules-)
 * [Implementation](#implementation)
   * [License](#license)
@@ -31,7 +31,7 @@
 This is the firt main project of 42 School Common Core, `Libft`. Creating our first library in C!! Exciting, right!? Follow me and lets discover more about it!
 
 ----
-<h1> First thing first: Concepts! </h1>
+<h1> Concepts! </h1>
 
 We must create a library in C! Okay... but what is a library? As you can imagine, its a lovely place, filled with possibilities! In our case, this place is simmilar to a repository, and the possibilities are our functions! Let's deep dive.
 
@@ -65,6 +65,7 @@ In order to understand more about the topic, let's talk about the **preprocessor
 
 -----
 <h1> Preprocessors </h1>
+
 
 Preprocessors is a program that processes its input data to produce output that is used as input in another program!
 
@@ -107,6 +108,16 @@ To transform the functions into a library, we need to create two files:
 <ul>
 	<li> Header: this file contains the declarations and definitions of what is contained within the library. Here we define which functions (just your prototype), types and variables will be part of the library. Its extension is .h </li>
 	<li>Library source code: file that contains the implementation of the functions defined in the header. Its extension is .c </li>
+</ul>
+
+Also is important to know that we have mainly two types of libraries:
+<ul>
+	<li>
+		Static libraries (.a files) are linked directly into the executable at compile time.
+	</li>
+	<li>
+		Dynamic libraries (.so files in Unix/Linux, .dll files in Windows) are linked at runtime.
+	</li>
 </ul>
 
 In `Libft` project, we're going to create our library called Libft using `.c` functions. If the header of the library, as shown, must have `.h`, we are going to call our library `libft.h`!!
@@ -404,7 +415,26 @@ fclean: clean
 	rm -rf a.out
 ```
 
-Nice! Okay! Everything is good so far. We know the basic sintax of Makefile, but how do we compile??
+Nice! Okay! Everything is good so far. We know the basic sintax of Makefile, how we can apply this when creating a library??
+
+Easy!
+<ol>
+	<li>First thing you must do is create your C source files containing any functions that will be used. Your library can contain multiple object files.</li>
+	<li>After creating the C source files, compile the files into object files.</li>
+</ol>
+
+To create a library:
+```bash
+ar rcs libmylib.a obj_file1.o obj_file2.o obj_file3.o
+
+# in other words
+ ar - create, modify, and extract from archives
+	r - Insert the files member into archive
+	c - Create the archive
+	s - Write an object-file index into the archive, or update an existing one, even if no other change is made to the archive.
+```
+
+Perfect!! So how can we compile anyway?
 
 <h3> Compiling and Macros of Makefile </h3>
 
@@ -419,7 +449,7 @@ To know more about compiling, read more in [here](https://unstop.com/blog/compil
 
 If we use `Makefile` to compile, how exactly we do it?
 
-Let's look at this [example](https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/) writen by Bruce Maxwell in the Colby Computer Science College considering 3 files. 1. hellomake.c | 2. hellofunc.c | 3. hellomake.h |
+Let's look at this [example](https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/) writen by Bruce Maxwell in the Colby Computer Science College considering 3 files: `hellomake.c`, `hellofunc.c` and `hellomake.h`
 
 ```C
 //FILE 1
@@ -551,7 +581,13 @@ clean:
 
 So now you have a perfectly good makefile that you can modify to manage small and medium-sized software projects. You can add multiple rules to a makefile; you can even create rules that call other rules. For more information on makefiles and the make function, check out the [GNU Make Manual](www.gnu.org/software/make/manual/make.html), which will tell you more than you ever wanted to know (really).
 
+<h1> Finally! </h1>
+Ok! Now that you know what a library is and how to build it, it is your chance to explore more and more in this project! Understanding the workings of libraries in C and the use of Makefiles is essential for efficient software development. Libraries in C provide a modular approach to coding, enabling the reuse of functions and promoting code organization and maintainability. Static and dynamic libraries offer different advantages, from faster execution times to reduced memory usage, depending on the application's needs. <br><br>
 
+
+Makefiles, on the other hand, streamline the build process by automating the compilation and linking stages. They ensure that only the necessary parts of a project are rebuilt, saving time and reducing the potential for errors. With the ability to define dependencies and custom build rules, Makefiles are powerful tools for managing complex projects!! <br>
+
+Together, the use of libraries and Makefiles can significantly enhance the development workflow, leading to more robust and scalable software solutions. By mastering these tools, software engineers and developers can improve their productivity and ensure their code is both efficient and maintainable. <br>
 
 ### License
 
