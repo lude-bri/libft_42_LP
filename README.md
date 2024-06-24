@@ -113,20 +113,22 @@ In `Libft` project, we're going to create our library called Libft using `.c` fu
 
 -----
 <h1>Building our first C Library</h1>
-<img src="https://www.familyhandyman.com/wp-content/uploads/2018/01/FH98DJA_01234LEAD.jpg?resize=522%2C522">
-<h5> this is you after finishing Libft </h5>
+<p align="center">
+	<img src="https://www.familyhandyman.com/wp-content/uploads/2018/01/FH98DJA_01234LEAD.jpg?resize=522%2C522">
+<h5 align="center" > this is you after finishing your Libft </h5>
+</p>
+<br>
+Ok! Now it's time to get serious. Let's imagine that you're building in your house a very lovely library. How this would look like? I know.. you may be asking, what does this has to do with Libft? Well, everything!<br>
 
-Ok! Now it's time to get serious. Let's imagine that you're building in your house a very lovely library. How this would look like? I know.. you may be asking, what does this has to do with Libft? Well, everything!
-
-First of all, it's a must to have bookshelves, an structure, for you to have your books placed in order, so when you need to read something, you'll have no troubles finding it.
+<br> First of all, it's a must to have bookshelves, an structure, for you to have your books placed in order, so when you need to read something, you'll have no troubles finding it.
 
 After that, and most important, the books! Which are going to be the books? And why? 
 
 Lastly, you have to protected it, build a door (very important) and lock it with a key. That key will be important for us to access your fabulous library.
 
-In other words, we need to write a **Preprocessor Directives**, the **Functions** needed, and the **name** of the executable file.
+In other words, we need to write a **1. Preprocessor Directives**, the **2. Functions** needed, and the key to the library, or simply, our **3. Makefile**
 
-<h2> The Preprocessor Directives for Libft </h2>
+<h2> 1. The Preprocessor Directives for Libft </h2>
 
 So let's begin defining our library with:
 ```C
@@ -145,7 +147,7 @@ Which means
  	</ol>
 Our bookshelve is now created! So lets fill this with our books.
 
-<h2> The Functions </h2>
+<h2> 2. The Functions </h2>
 
 This project comprises `43` functions divided into three sections:
 - **Mandatory Part 1**, a selection of `23` `libc` functions;
@@ -351,7 +353,204 @@ ___
 </details>
 
 -----
-<h1>Makefile</h1>
+<h2> 3. Makefile </h2>
+
+Well, actually, the Makefile is a whole new topic. Quite amazing, I would say. Highly encourage you to read more about it. But, to summarize it, let's consider a few aspects of it.
+
+First, **what** is a Makefile?
+Second, **why** do we need it? Lastly, **HOW** DO WE WRITE IT?
+
+Calm down! Here we have it:
+
+<h3> 1. What </h3>
+Makefiles are a simple way to organize code compilation. Also `make` is a program utility that automatically determines which parts of a large program need to be recompiled, and issues commands to recompile them. It reads instructions from a `Makefile` <br><br>
+The make utility is an automatic tool capable of deciding which commands can/should be executed.
+  
+ <h3> 2. Why? </h3>
+Build automation to build executable code (such as a program or **library**) from source code, preventing manual file-by-file compilation.
+
+<h3>3. How? </h3>
+The Makefile is called to handle the complitation and linking of projects and it's files. <br><br>
+
+The core of the makefile consists of rules defined as follows:
+```Makefile
+target: [prerequisite_1], [prerequisite_2], ..., [prerequisite_n]
+	command1,
+	command2,
+	command3,
+```
+<ol> 
+	<li> The target is the name of the action you want to execute or usually the name of the file you want to produce.</li> 
+	<li> Prerequisites are files that are used as input to create the target. </li>
+	<li> The commands are part of what we call the recipe, which is the action that the make command performs. The recipe can have more than one command, on the same line or several.</li>
+</ol>
+ 
+Example: To generate a `hello.o` file from a `hello.c` file we write:
+```Makefile
+hello.o: hello.c
+	clang -c hello.c
+```
+
+The power that we have to create can be use to destroy (or clean)
+```Makefile
+clean:
+	rm -rf hello.o
+```
+> Some rules don't need dependencies
+
+You can also fave a similar rule to clean both object files and execute
+```Makefile
+fclean: clean
+	rm -rf a.out
+```
+
+Nice! Okay! Everything is good so far. We know the basic sintax of Makefile, but how do we compile??
+
+<h3> Compiling and Macros of Makefile </h3>
+
+What compiling is? Shortly, its when your source code is transform into an object file and link these object files to transform them into a binary.
+
+Like this:
+<p align="center">
+	<img src="https://embarcados.com.br/wp-content/uploads/2017/09/makefile-1.jpg">
+</p>
+
+To know more about compiling, read more in [here](https://unstop.com/blog/compilation-in-c)
+
+If we use `Makefile` to compile, how exactly we do it?
+
+Let's look at this [example](https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/) writen by Bruce Maxwell in the Colby Computer Science College considering 3 files. 1. hellomake.c | 2. hellofunc.c | 3. hellomake.h |
+
+```C
+//FILE 1
+#include <hellomake.h>
+
+int main() {
+  // call a function in another file
+  myPrintHelloMake();
+
+  return(0);
+}
+
+```
+
+```C
+//FILE 2
+#include <stdio.h>
+#include <hellomake.h>
+
+void myPrintHelloMake(void) {
+
+  printf("Hello makefiles!\n");
+
+  return;
+}
+```
+
+```C
+//FILE 3
+
+/*
+example include file
+*/
+
+void myPrintHelloMake(void);
+
+```
+
+Normally, you would compile this collection of code by executing the following command:
+
+```C
+ gcc -o hellomake hellomake.c hellofunc.c -I.
+```
+
+This compiles the two `.c` files and names the executable hellomake. The `-I`. is included so that gcc will look in the current directory (.) for the include file hellomake.h. Without a makefile, the typical approach to the test/modify/debug cycle is to use the up arrow in a terminal to go back to your last compile command so you don't have to type it each time, especially once you've added a few more `.c` files to the mix.
+
+Unfortunately, this approach to compilation has two downfalls. First, if you lose the compile command or switch computers you have to retype it from scratch, which is inefficient at best. Second, if you are only making changes to one .c file, recompiling all of them every time is also time-consuming and inefficient. So, it's time to see what we can do with a makefile.
+
+The simplest makefile you could create would look something like:
+
+```Makefile
+hellomake: hellomake.c hellofunc.c
+     gcc -o hellomake hellomake.c hellofunc.c -I.
+```
+
+In order to be a bit more efficient, let's try the following:
+
+```Makefile
+CC=gcc
+CFLAGS=-I.
+
+hellomake: hellomake.o hellofunc.o
+     $(CC) -o hellomake hellomake.o hellofunc.o
+```
+
+So now we've defined some constants `CC` and `CFLAGS`. It turns out these are special constants that communicate to make how we want to compile the files `hellomake.c` and `hellofunc.c`. In particular, the **macro** `CC` **is the C compiler to use**, and `CFLAGS` is the list of flags to pass to the compilation command. By putting the object files--hellomake.o and hellofunc.o--in the dependency list and in the rule, `make` knows it must first compile the .c versions individually, and then build the executable hellomake.
+
+Using this form of makefile is sufficient for most small scale projects. However, there is one thing missing: dependency on the include files. If you were to `make` a change to hellomake.h, for example, make would not recompile the .c files, even though they needed to be. In order to fix this, we need to tell `make` that all .c files depend on certain .h files. We can do this by writing a simple rule and adding it to the makefile.
+
+```Makefile
+CC=gcc
+CFLAGS=-I.
+DEPS = hellomake.h
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+hellomake: hellomake.o hellofunc.o 
+	$(CC) -o hellomake hellomake.o hellofunc.o 
+```
+
+This addition first creates the macro DEPS, which is the set of .h files on which the .c files depend. Then we define a rule that applies to all files ending in the .o suffix. The rule says that the .o file depends upon the .c version of the file and the .h files included in the DEPS macro. The rule then says that to generate the .o file, `make` needs to compile the .c file using the compiler defined in the CC macro. The -c flag says to generate the object file, the `-o $@` says to put the output of the compilation in the file named on the left side of the `:`, the `$<` is the first item in the dependencies list, and the CFLAGS macro is defined as above.
+
+As a final simplification, let's use the special macros `$@` and `$^`, which are the left and right sides of the `:`, respectively, to make the overall compilation rule more general. In the example below, all of the include files should be listed as part of the macro DEPS, and all of the object files should be listed as part of the macro OBJ.
+
+```Makefile
+CC=gcc
+CFLAGS=-I.
+DEPS = hellomake.h
+OBJ = hellomake.o hellofunc.o 
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+hellomake: $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS)
+```
+
+So what if we want to start putting our .h files in an include directory, our source code in a src directory, and some local libraries in a lib directory? Also, can we somehow hide those annoying .o files that hang around all over the place? The answer, of course, is yes. The following makefile defines paths to the include and lib directories, and places the object files in an obj subdirectory within the src directory. It also has a macro defined for any libraries you want to include, such as the math library `-lm`. This makefile should be located in the src directory. Note that it also includes a rule for cleaning up your source and object directories if you type `make clean`. The .PHONY rule keeps `make` from doing something with a file named clean.
+
+```Makefile
+IDIR =../include
+CC=gcc
+CFLAGS=-I$(IDIR)
+
+ODIR=obj
+LDIR =../lib
+
+LIBS=-lm
+
+_DEPS = hellomake.h
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+
+_OBJ = hellomake.o hellofunc.o 
+OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+
+
+$(ODIR)/%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+hellomake: $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+
+.PHONY: clean
+
+clean:
+	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ 
+```
+
+So now you have a perfectly good makefile that you can modify to manage small and medium-sized software projects. You can add multiple rules to a makefile; you can even create rules that call other rules. For more information on makefiles and the make function, check out the [GNU Make Manual](www.gnu.org/software/make/manual/make.html), which will tell you more than you ever wanted to know (really).
+
 
 
 ### License
