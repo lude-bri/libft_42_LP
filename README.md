@@ -41,25 +41,27 @@ Those swiches doesn't understand `while` or `if/else`, only understands zeros an
 
 In short:
 
-> _Libaries consist of a set of related functions to perform a common task. Standard system libraries are usually found in `/lib` and `/usr/lib/` directories._ [(source)](https://www.cs.dartmouth.edu/~campbell/cs50/buildlib.html)
+> _Libaries consist of a set of related functions to perform a common task. Standard system libraries are usually found in /lib and /usr/lib/ directories._ [(Dartmouth.edu)](https://www.cs.dartmouth.edu/~campbell/cs50/buildlib.html)
 
-Uma biblioteca is um arquitvo contando um conjunto de funcoes (pedacos de codigo), variaveis, macros etc., ja implementados, e que podem ser utilizados pelo programador em seu programa
+A library is a file containing a set of functions (pieces of code), variables, macros, etc., already implemented, and which can be used by the programmer in his program!
 
-Basically, whenever we use `#include`, we are informing para o preprocessador tratar o conteudo de um arquivo especificado. Em outras palavras, dizemos ao computer to lookup that standard library (or dictionary, in our analogy) and read the following code accordingly to the rules defined by the library!
+Basically, whenever we use `#include`, we are informing the **preprocessor** to handle the contents of a specified file. In other words, we tell the computer to lookup that standard library (or dictionary, in our analogy) and read the following code according to the rules defined by the library!
 
-O comando `#include` permite duas sintaxes:
+The `#include` command allows two syntaxes:
 <ul>
- 	<li> #include < library_name >: o preprocessor vai buscar pela bilbioteca nos caminhos de procura pre-especificados do compilador. Usamos essa sintaxe quando estamos incluindo uma bilbioteca que e propria do sistema, como <stdio.h> e <stdlib.h> </li>
-   	<li>#include "library_name" : o preprocessor procurara pela biblioteca no mesmo diretorio onde se encontra o nosso programa. Podemos ainda optar por informar o nome do arquivo com o caminho completo, ou seja, em qual diretorio ele se encontra e como chegar la </li>
+ 	<li> #include < library_name > : the preprocessor will search for the library in the compiler's pre-specified search paths. We use this syntax when we are including a library that is system-specific, such as <stdio.h> and <stdlib.h> </li>
+   	<li> #include "library_name" : the preprocessor will look for the library in the same directory where our program is located. We can also choose to inform the name of the file with the full path, that is, in which directory it is located and how to get there </li>
 	</ul>
 
-> de modo geral, os arquivos de bibliotecas na linguagem C sao terminados com a extensao .h
+ Example:
+ ```C
+#include <unistd.h>  " Standard Library
+#include "libft.h"   " Non standart Library
+```
 
-Exemplo de uso o `#include`
-<ul>
-	<li</li>
-</ul>
-But when we create our own library, how does it works? Well, let's talk about the preprocessors!
+> In general, library files in the C language end with the extension .h
+
+In order to understand more about the topic, let's talk about the **preprocessors**!
 
 -----
 <h1> Preprocessors </h1>
@@ -68,7 +70,9 @@ Preprocessors is a program that processes its input data to produce output that 
 
 It means that before even reading the code, it will take into account what is defined, almost like rules, and the program will execute accordingly the rules we've set. 
 
-In C programming, preprocessing is the first step in the compilation of a C code. It occurs before the tokenization step. One of the important functions of a preprocessor is to include the header files that contain the library functions used in the program. The preprocessor in C also defines the constants and expands the macros. [(see more)](https://www.tutorialspoint.com/cprogramming/c_preprocessors.htm)
+In C programming, preprocessing is the first step in the compilation of a C code. It occurs before the tokenization step. One of the important functions of a preprocessor is to include the header files that contain the library functions used in the program. The preprocessor in C also defines the constants and expands the macros.[(see more)](https://www.tutorialspoint.com/cprogramming/c_preprocessors.htm)
+
+> A Macro in C is essentially a piece of code or a value that is associated with an identifier. This identifier, known as the macro name, is defined using the #define preprocessor directive
 
 The preprocessor statements in C are called directives. A preprocessor section of the program always appears at the top of the C code. Each preprocessor statement starts with the hash (#) symbol.
 
@@ -90,7 +94,55 @@ The following [table](https://www.tutorialspoint.com/cprogramming/c_preprocessor
 | #error	|	Prints error message on stderr.
 | #pragma	|	Issues special commands to the compiler, using a standardized method.
 
-So, when we're creating our own library it is important not only to consider the preprocessors, but also, how to write and compile! Meaning that we need to use a `Makefile`
+<h3> About Libraries... again </h3>
+The C language allows us to create our own library. In it, we can place our functions, structures, etc., which makes it more practical and easier to use in other projects.
+
+Libraries are not very different from source code files!
+
+> A library is like your main source code file, with the difference that it does not have a main() function. This is because your program will not start in the library.
+
+When we want to create a library, we consider main functions, those that are very useful to us, which we will always use. These functions, instead of always being rewritten, will be implied when we announce our library using the preprocessor directives!
+
+To transform the functions into a library, we need to create two files:
+<ul>
+	<li> Header: this file contains the declarations and definitions of what is contained within the library. Here we define which functions (just your prototype), types and variables will be part of the library. Its extension is .h </li>
+	<li>Library source code: file that contains the implementation of the functions defined in the header. Its extension is .c </li>
+</ul>
+
+In `Libft` project, we're going to create our library called Libft using `.c` functions. If the header of the library, as shown, must have `.h`, we are going to call our library `libft.h`!!
+
+-----
+<h1>Building our first C Library</h1>
+<img src="https://www.familyhandyman.com/wp-content/uploads/2018/01/FH98DJA_01234LEAD.jpg?resize=522%2C522">
+<h5> this is you after finishing Libft </h5>
+
+Ok! Now it's time to get serious. Let's imagine that you're building in your house a very lovely library. How this would look like? I know.. you may be asking, what does this has to do with Libft? Well, everything!
+
+First of all, it's a must to have bookshelves, an structure, for you to have your books placed in order, so when you need to read something, you'll have no troubles finding it.
+
+After that, and most important, the books! Which are going to be the books? And why? 
+
+Lastly, you have to protected it, build a door (very important) and lock it with a key. That key will be important for us to access your fabulous library.
+
+In other words, we need to write a **Preprocessor Directives**, the **Functions** needed, and the **name** of the executable file.
+
+<h2> The Preprocessor Directives for Libft </h2>
+
+So let's begin defining our library with:
+```C
+#ifndef LIBFT_H
+# define LIBFT_H
+
+(the functions)
+
+#endif
+```
+Which means
+	<ol>
+ 		<li> If LIBFT_H macro is not defined </li>
+   		<li> Define as LIBFT_H </li>
+     		<li> Ends preprocessor conditional </li>
+ 	</ol>
 
 -----
 <h1>Makefile</h1>
