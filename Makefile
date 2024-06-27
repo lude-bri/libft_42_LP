@@ -28,7 +28,7 @@ SRCS_FILES = ft_isalpha.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c \
 BONUS_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c 
 				
-OBJS = $(SRCS_FILES:.c=.o)
+OBJS = $(addprefix $LIBFT_PATH/SRCS_FILES:.c=.o)
 
 BONUS = $(BONUS_FILES:.c=.o) $(OBJS)
 
