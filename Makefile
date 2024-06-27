@@ -34,19 +34,9 @@ EXTRA = $(addprefix $(LIBFT_PATH)/, ft_putendl_fd.c ft_putnchar_fd.c \
 		ft_pow.c ft_atoi_base.c ft_absd.c ft_min.c ft_max.c ft_atol.c \
 		ft_issign.c ft_free.c ft_strjoin_free.c ft_swap.c ft_strset.c)
 
-PRINTF_PATH	= ./ft_printf
-PRINTF_SRC 	= $(addprefix $(PRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
-			  ft_flags.c ft_parse.c ft_print_c.c ft_print_di.c ft_print_hex.c \
-			  ft_print_p.c ft_print_s.c ft_print_u.c ft_print_f.c)
-
-GNL_PATH 	= ./get_next_line
-GNL_SRC		= $(addprefix $(GNL_PATH)/, get_next_line.c get_next_line_utils.c)
-
 OBJS		= $(addprefix $(BUILD_PATH)/, $(notdir $(SRC:.c=.o)))
 BONUS_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(BONUS:.c=.o)))
 EXTRA_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(EXTRA:.c=.o)))
-PRINTF_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(PRINTF_SRC:.c=.o)))
-GNL_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(GNL_SRC:.c=.o)))
 
 ### Message Vars
 _NAME	 		= [$(MAG)libft$(D)]
@@ -84,14 +74,6 @@ $(BUILD_PATH):
 	@echo "* $(YEL)Creating $(BUILD_PATH) folder:$(D) $(_SUCCESS)"
 
 $(BUILD_PATH)/%.o: $(LIBFT_PATH)/%.c
-	@echo -n "$(GRN)█$(D)"
-	$(CC) $(CFLAGS) -c $< -o $@
-
-$(BUILD_PATH)/%.o: $(PRINTF_PATH)/%.c
-	@echo -n "$(GRN)█$(D)"
-	$(CC) $(CFLAGS) -c $< -o $@
-
-$(BUILD_PATH)/%.o: $(GNL_PATH)/%.c
 	@echo -n "$(GRN)█$(D)"
 	$(CC) $(CFLAGS) -c $< -o $@
 
