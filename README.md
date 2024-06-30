@@ -78,7 +78,7 @@ You can see the folowing scheme the two important processes for this to work: **
 
 As you can see, the library, represented in here as `.lib` is linked with the objects `.o` to create our executable program!
 
-## <a name="#index-1.2">1.2. Static library and Dinamic library </a>
+## Static library and Dinamic library
 
 There are two basic ways of how library works. This one showed above is know as being the **Static Library**, but we can also see **Dynamic Library**
 
