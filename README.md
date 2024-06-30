@@ -39,11 +39,11 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 ----
 # <a name="#index-1">1. Libraries</a>
 
-We must create a library in C! Okay... but what is a library? As you can imagine, its a lovely place, filled with possibilities! In our case, this place is simmilar to a repository, and the possibilities are our functions! Let's deep dive.
+We must create a library in C! Okay... but what is a library? As you can imagine, it's a lovely place, filled with possibilities! In our case, this place is similar to a repository, and the possibilities are our functions! Let's deep dive.
 
-Whenever we code, we are writing commands to the computer and, if everything is correct, we expect a successfull output. Nevertheless, wrinting commands in C (or other language) is simply abstracting tons of minimal processes inside a computer hardware, turning on and off thousands of switches. 
+Whenever we code, we are writing commands to the computer and, if everything is correct, we expect a successful output. Nevertheless, writing commands in C (or other languages) is simply abstracting tons of minimal processes inside computer hardware, turning on and off thousands of switches. 
 
-Those swiches doesn't understand `while` or `if/else`, only understands zeros and ones. Thats why its binary! So, how the computer understands those complexes commands? Well, a translator is needed. And, as we know, every translator needs a sort of a dictionary. This is exactly what our library is. A dictionary!
+Those switches don't understand `while` or `if/else`, only understand zeros and ones. That's why it's binary! So, how does the computer understand those complex commands? Well, a translator is needed. And, as we know, every translator needs a sort of dictionary. This is exactly what our library is. A dictionary!
 
 In short:
 
@@ -51,7 +51,7 @@ In short:
 
 A library is a file containing a set of functions (pieces of code), variables, macros, etc., already implemented, and which can be used by the programmer in his program!
 
-Basically, whenever we use `#include`, we are informing the **preprocessor** to handle the contents of a specified file. In other words, we tell the computer to lookup that standard library (or dictionary, in our analogy) and read the following code according to the rules defined by the library!
+Whenever we use `#include`, we are informing the **preprocessor** to handle the contents of a specified file. In other words, we tell the computer to look up that standard library (or dictionary, in our analogy) and read the following code according to the rules defined by the library!
 
 The `#include` command allows two syntaxes:
 <ul>
@@ -67,7 +67,7 @@ The `#include` command allows two syntaxes:
 > [!NOTE]
 > In general, library files in the C language end with the extension .h
 
-In order to understand more about the topic, let's talk about the **preprocessors**!
+To understand more about the topic, let's talk about the **preprocessors**!
 
 -----
 # <a name="#index-2"> 2. Preprocessors </a>
