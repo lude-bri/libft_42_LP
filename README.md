@@ -14,8 +14,8 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 ## <a name="#index-0">Index</a>
 
 <ul>
-	<li><strong><a href="#-concepts-" style="color:white">1. Libraries </a></strong></li>
-	<li><a href="#-preprocessors-">2. Preprocessors </li>
+	<li><strong><a href="#index-1" style="color:white">1. Libraries </a></strong></li>
+	<li><a href="#index-2">2. Preprocessors </li>
 </ul>
 
 * [About](#-about-)
