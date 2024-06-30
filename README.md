@@ -6,13 +6,12 @@
 
 <!-------About-------->
 
-<h1> About </h1>
+## About
 
 This is the firt main project of 42 School Common Core, `Libft`. Creating our first library in C!! Exciting, right!? Follow me and lets discover more about it!
 
 ----
-<div>
-<h3 align=center>Index</h3>
+## <a name="#index-0">Index</a>
 
 <ul>
 	<li><strong><a href="#-about-" style="color:white">Guide</a></strong></li>
@@ -33,7 +32,6 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
  * [Finally](#-finally-)
   * [License](#license)
 
-</div>
 <!---------------------
 ## <a name="index-0">Index</a>
 <ul>
@@ -75,15 +73,6 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 		<li><a href="#activate-debug">Activate debug commands/flags with conditionals</a></li>
 		<li><a href="#general-tips">General tips</a></li>
 	</ul> -->
-	<!------
- <li><strong><a href="#useful-topics" style="color:white">Useful Topics</a></strong></li>
-	<ul style="list-style-type:disc">
-		<li><a href="#special-targets">Special Targets</a></li>
-		<li><a href="#flags">Makefile Flags</a></li>
-		<li><a href="#errors">Good-to-know Errors</a></li>
-	</ul>
-</ul> --->
-
 
 
 ------------------------------------------------------------------
