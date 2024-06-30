@@ -55,7 +55,7 @@ Basically, whenever we use `#include`, we are informing the **preprocessor** to 
 
 The `#include` command allows two syntaxes:
 <ul>
- 	<li> <strong> <a style="color:blue"> #include < library_name ></a></strong> : the preprocessor will search for the library in the compiler's pre-specified search paths. We use this syntax when we are including a library that is system-specific, such as <stdio.h> and <stdlib.h> </li> <br>
+ 	<li> <strong> #include < library_name ></strong> : the preprocessor will search for the library in the compiler's pre-specified search paths. We use this syntax when we are including a library that is system-specific, such as <stdio.h> and <stdlib.h> </li> <br>
    	<li><strong> #include "library_name"</strong> : the preprocessor will look for the library in the same directory where our program is located. We can also choose to inform the name of the file with the full path, that is, in which directory it is located and how to get there </li>
 	</ul>
 
@@ -78,11 +78,12 @@ It means that before even reading the code, it will take into account what is de
 
 In C programming, preprocessing is the first step in the compilation of a C code. It occurs before the tokenization step. One of the important functions of a preprocessor is to include the header files that contain the library functions used in the program. The preprocessor in C also defines the constants and expands the macros.[(see more)](https://www.tutorialspoint.com/cprogramming/c_preprocessors.htm)
 
+> [!IMPORTANT]
 > A Macro in C is essentially a piece of code or a value that is associated with an identifier. This identifier, known as the macro name, is defined using the #define preprocessor directive
 
-The preprocessor statements in C are called directives. A preprocessor section of the program always appears at the top of the C code. Each preprocessor statement starts with the hash (#) symbol.
-
 ## <a name="#index-2-1"> 2.1. Preprocessor Directives in C </a>
+
+The preprocessor statements in C are called directives. A preprocessor section of the program always appears at the top of the C code. Each preprocessor statement starts with the hash (#) symbol.
 
 The following [table](https://www.tutorialspoint.com/cprogramming/c_preprocessors.htm) lists down all the important preprocessor directives
 
@@ -110,21 +111,34 @@ The C language allows us to create our own library. In it, we can place our func
 
 Libraries are not very different from source code files!
 
+> [!IMPORTANT]
 > A library is like your main source code file, with the difference that it does not have a main() function. This is because your program will not start in the library.
 
 When we want to create a library, we consider main functions, those that are very useful to us, which we will always use. These functions, instead of always being rewritten, will be implied when we announce our library using the preprocessor directives!
 
 To transform the functions into a library, we need to create two files:
 <ul>
-	<li><strong>Header</strong>: this file contains the declarations and definitions of what is contained within the library. Here we define which functions (just your prototype), types and variables will be part of the library. Its extension is .h </li><br>
-	<li><strong>Library source code</strong>: file that contains the implementation of the functions defined in the header. Its extension is .c.</li>
+	<li><strong>Header</strong>: this file contains the declarations and definitions of what is contained within the library. Here we define which functions (just your prototype), types and variables will be part of the library. <strong>Its extension is .h </strong></li></ul>
+
+> Example: `libft.h`
+<ul>
+	<li><strong>Library source code</strong>: file that contains the implementation of the functions defined in the header. <strong>Its extension is .c.</strong></li>
 </ul>
 
-Also is important to know that we have mainly two types of libraries:
+> Example: `our_function.c`
+
+<br>
+Also is important to know that we have mainly two types of libraries: 
+
 <ul>
 	<li>
 		<strong>Static libraries (.a files)</strong> are linked directly into the executable at compile time.
 	</li>
+</ul>
+
+>In our case, that will be `libft.a`
+
+<ul>
 	<li>
 		<strong>Dynamic libraries (.so)</strong> files in Unix/Linux, .dll files in Windows) are linked at runtime.
 	</li>
