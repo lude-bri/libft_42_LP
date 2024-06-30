@@ -55,8 +55,8 @@ Basically, whenever we use `#include`, we are informing the **preprocessor** to 
 
 The `#include` command allows two syntaxes:
 <ul>
- 	<li> #include < library_name > : the preprocessor will search for the library in the compiler's pre-specified search paths. We use this syntax when we are including a library that is system-specific, such as <stdio.h> and <stdlib.h> </li>
-   	<li> #include "library_name" : the preprocessor will look for the library in the same directory where our program is located. We can also choose to inform the name of the file with the full path, that is, in which directory it is located and how to get there </li>
+ 	<li> <strong> <a style="color:blue"> #include < library_name ></a></strong> : the preprocessor will search for the library in the compiler's pre-specified search paths. We use this syntax when we are including a library that is system-specific, such as <stdio.h> and <stdlib.h> </li> <br>
+   	<li><strong> #include "library_name"</strong> : the preprocessor will look for the library in the same directory where our program is located. We can also choose to inform the name of the file with the full path, that is, in which directory it is located and how to get there </li>
 	</ul>
 
  Example:
