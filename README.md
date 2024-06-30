@@ -1,10 +1,3 @@
-<!--------------------------------
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=0ABAB5&text=Good%20Job!&section=footer&fontColor=fcf3f2&fontAlignY=46" />
-</p>
-<h1 align="center"> Hello! I'm sorry! Working on that! </h1>
------>
 
 <!-------Libft_Image-------->
 <p align="center">
