@@ -39,17 +39,28 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 ----
 # <a name="#index-1">1. Libraries</a>
 
-We must create a library in C! Okay... but what is a library? As you can imagine, it's a lovely place, filled with possibilities! In our case, this place is similar to a repository, and the possibilities are our functions! Let's deep dive.
+In this project we’re going to create a Library. So.. what’s a library?
 
-Whenever we code, we are writing commands to the computer and, if everything is correct, we expect a successful output. Nevertheless, writing commands in C (or other languages) is simply abstracting tons of minimal processes inside computer hardware, turning on and off thousands of switches. 
+It's a lovely place, filled with information! It’s a collection of books, materials and knowledge! Similarly, a software library is a collection of read-only resources! It’s simply a file.
 
-Those switches don't understand `while` or `if/else`, only understand zeros and ones. That's why it's binary! So, how does the computer understand those complex commands? Well, a translator is needed. And, as we know, every translator needs a sort of dictionary. This is exactly what our library is. A dictionary!
+A library is a file containing a set of functions (pieces of code), variables, macros, etc., already implemented, and which can be used by the programmer in his program!
+
+>[!IMPORTANT]
+>The major difference of a Library from the rest of the applications or programs is that you cannot execute a library. Applications execute and they utilize libraries.
+
+Whenever programmers code, they can use a same function multiple times. Instead of rewriting the same function all the time, it’s always better to automate this service and create a library that includes this function!
+
+That’s why it is so handy to have your own library, so then you can perform better accordingly to the functions you use.
+
+Helpfully, we don’t need to ALWAYS write our library. That is because there are already tons of standards libraries to use.
 
 In short:
 
 > _Libaries consist of a set of related functions to perform a common task. Standard system libraries are usually found in /lib and /usr/lib/ directories._ [(Dartmouth.edu)](https://www.cs.dartmouth.edu/~campbell/cs50/buildlib.html)
 
-A library is a file containing a set of functions (pieces of code), variables, macros, etc., already implemented, and which can be used by the programmer in his program!
+
+-----
+# <a name="#index-2"> 2. Preprocessors </a>
 
 Whenever we use `#include`, we are informing the **preprocessor** to handle the contents of a specified file. In other words, we tell the computer to look up that standard library (or dictionary, in our analogy) and read the following code according to the rules defined by the library!
 
@@ -69,8 +80,6 @@ The `#include` command allows two syntaxes:
 
 To understand more about the topic, let's talk about the **preprocessors**!
 
------
-# <a name="#index-2"> 2. Preprocessors </a>
 
 Preprocessors is a program that processes its input data to produce output that is used as input in another program!
 
