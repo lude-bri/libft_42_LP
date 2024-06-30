@@ -63,7 +63,7 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 
 ------------------------------------------------------------------
 ----
-# <a name="#index-1"> 1. Libraries </a>
+# <a name="#index-1">1. Libraries</a>
 
 We must create a library in C! Okay... but what is a library? As you can imagine, its a lovely place, filled with possibilities! In our case, this place is simmilar to a repository, and the possibilities are our functions! Let's deep dive.
 
