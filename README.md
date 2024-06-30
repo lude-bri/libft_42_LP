@@ -73,6 +73,30 @@ You can see the folowing scheme the two important processes for this to work: **
 	<image src=images/linking.png>
 </div>
 
+> In the case of the Unix environment, the executable file created is always named a.out, which means that each new compilation deletes the executable from the previous project.
+
+
+As you can see, the library, represented in here as `.lib` is linked with the objects `.o` to create our executable program!
+
+## <a name="#index-1.2">1.2. Static library and Dinamic library </a>
+
+There are two basic ways of how library works. This one showed above is know as being the **Static Library**, but we can also see **Dynamic Library**
+
+<ul>
+	<li>
+		<strong>Static libraries (.a files)</strong> are linked directly into the executable at compile time.
+	</li>
+</ul>
+
+>In our case, that will be `libft.a`
+
+<ul>
+	<li>
+		<strong>Dynamic libraries (.so)</strong> files in Unix/Linux, .dll files in Windows) are linked at runtime.
+	</li>
+</ul>
+
+<br>
 
 -----
 # <a name="#index-2"> 2. Preprocessors </a>
@@ -150,23 +174,6 @@ To transform the functions into a library, we need to create two files:
 </ul>
 
 > Example: `our_function.c`
-
-<br>
-Also is important to know that we have mainly two types of libraries: 
-
-<ul>
-	<li>
-		<strong>Static libraries (.a files)</strong> are linked directly into the executable at compile time.
-	</li>
-</ul>
-
->In our case, that will be `libft.a`
-
-<ul>
-	<li>
-		<strong>Dynamic libraries (.so)</strong> files in Unix/Linux, .dll files in Windows) are linked at runtime.
-	</li>
-</ul>
 
 In `Libft` project, we're going to create our library called Libft using `.c` functions. If the header of the library, as shown, must have `.h`, we are going to call our library `libft.h`!!
 
