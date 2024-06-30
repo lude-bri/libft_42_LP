@@ -91,7 +91,7 @@
 This is the firt main project of 42 School Common Core, `Libft`. Creating our first library in C!! Exciting, right!? Follow me and lets discover more about it!
 
 ----
-<h1> Concepts! </h1>
+<h1> 1. Concepts </h1>
 
 We must create a library in C! Okay... but what is a library? As you can imagine, its a lovely place, filled with possibilities! In our case, this place is simmilar to a repository, and the possibilities are our functions! Let's deep dive.
 
