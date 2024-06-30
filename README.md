@@ -15,7 +15,7 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 
 <ul>
 	<li><strong><a href="#index-1" style="color:white">1. Libraries </a></strong></li>
-	<li><strong><a href="#index-2" style="color:white">2. Preprocessors </a></strong></li>
+	<li><strong><a href="#-2-preprocessors-" style="color:white">2. Preprocessors </a></strong></li>
 </ul>
 
 <!---------------------
