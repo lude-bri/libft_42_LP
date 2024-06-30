@@ -8,16 +8,15 @@
 
 <p align="center">
 	<img src="https://capsule-render.vercel.app/api?type=venom&height=200&color=0ABAB5&text=Libft&fontAlign=50&fontAlignY=61&animation=fadeIn&fontColor=fcf3f2&fontSize=100" />
-
 </p>
 
-<div align="center">
+<div>
 <h3 align=center>Index</h3>
-
-<!-- mtoc-start -->
 
 <ul>
 	<li><strong><a href="#-about-" style="color:white">About</a></strong></li>
+	<ul style="list-style-type:disc">
+		<li><a href="#-concepts-">1. Concepts</a></li>
 </ul>
 
 * [About](#-about-)
