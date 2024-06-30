@@ -108,8 +108,7 @@ The `#include` command allows two syntaxes:
 In order to understand more about the topic, let's talk about the **preprocessors**!
 
 -----
-<h1> Preprocessors </h1>
-
+# <a name="#index-2"> 2. Preprocessors </a>
 
 Preprocessors is a program that processes its input data to produce output that is used as input in another program!
 
@@ -121,7 +120,7 @@ In C programming, preprocessing is the first step in the compilation of a C code
 
 The preprocessor statements in C are called directives. A preprocessor section of the program always appears at the top of the C code. Each preprocessor statement starts with the hash (#) symbol.
 
-<h3> Preprocessor Directives in C </h3>
+## <a name="#index-2-1"> 2.1. Preprocessor Directives in C </a>
 
 The following [table](https://www.tutorialspoint.com/cprogramming/c_preprocessors.htm) lists down all the important preprocessor directives
 
@@ -142,7 +141,9 @@ The following [table](https://www.tutorialspoint.com/cprogramming/c_preprocessor
 | #pragma	|	Issues special commands to the compiler, using a standardized method.
 
 </div>
-<h3> About Libraries... again </h3>
+
+## <a name="#index-2-2"> 2.2. About Libraries... again </a>
+
 The C language allows us to create our own library. In it, we can place our functions, structures, etc., which makes it more practical and easier to use in other projects.
 
 Libraries are not very different from source code files!
@@ -153,24 +154,25 @@ When we want to create a library, we consider main functions, those that are ver
 
 To transform the functions into a library, we need to create two files:
 <ul>
-	<li> Header: this file contains the declarations and definitions of what is contained within the library. Here we define which functions (just your prototype), types and variables will be part of the library. Its extension is .h </li>
-	<li>Library source code: file that contains the implementation of the functions defined in the header. Its extension is .c </li>
+	<li><strong>Header</strong>: this file contains the declarations and definitions of what is contained within the library. Here we define which functions (just your prototype), types and variables will be part of the library. Its extension is .h </li><br>
+	<li><strong>Library source code</strong>: file that contains the implementation of the functions defined in the header. Its extension is .c.</li>
 </ul>
 
 Also is important to know that we have mainly two types of libraries:
 <ul>
 	<li>
-		Static libraries (.a files) are linked directly into the executable at compile time.
+		<strong>Static libraries (.a files)</strong> are linked directly into the executable at compile time.
 	</li>
 	<li>
-		Dynamic libraries (.so files in Unix/Linux, .dll files in Windows) are linked at runtime.
+		<strong>Dynamic libraries (.so)</strong> files in Unix/Linux, .dll files in Windows) are linked at runtime.
 	</li>
 </ul>
 
 In `Libft` project, we're going to create our library called Libft using `.c` functions. If the header of the library, as shown, must have `.h`, we are going to call our library `libft.h`!!
 
 -----
-<h1>Building our first C Library</h1>
+# <a name="#index-3"> 3. Building our first C Library </a>
+
 <p align="center">
 	<img src="https://www.familyhandyman.com/wp-content/uploads/2018/01/FH98DJA_01234LEAD.jpg?resize=522%2C522">
 <h5 align="center" > this is you after finishing your Libft </h5>
