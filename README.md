@@ -16,6 +16,10 @@
 
 <!-- mtoc-start -->
 
+<ul>
+	<li><strong><a href="#-about-" style="color:white">About</a></strong></li>
+</ul>
+
 * [About](#-about-)
 * [Concepts!](#-concepts-)
 * [Preprocessors](#-preprocessors-)
