@@ -10,6 +10,11 @@
 	<img src="https://capsule-render.vercel.app/api?type=venom&height=200&color=0ABAB5&text=Libft&fontAlign=50&fontAlignY=61&animation=fadeIn&fontColor=fcf3f2&fontSize=100" />
 </p>
 
+<h1> About </h1>
+
+This is the firt main project of 42 School Common Core, `Libft`. Creating our first library in C!! Exciting, right!? Follow me and lets discover more about it!
+
+----
 <div>
 <h3 align=center>Index</h3>
 
