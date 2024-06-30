@@ -14,7 +14,7 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 ## <a name="#index-0">Index</a>
 
 <ul>
-	<li><strong><a href="#index-1" style="color:white">1. Libraries </a></strong></li>
+	<li><strong><a href="#1-libraries" style="color:white">1. Libraries </a></strong></li>
 	<li><strong><a href="#index-2" style="color:white">2. Preprocessors </a></strong></li>
 	<ul style="list-style-type:disc">
 		<li><a href="#index-2-1"> 2.1. Preprocessor Directives in C</a></li>
