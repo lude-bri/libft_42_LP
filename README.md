@@ -14,9 +14,10 @@
 <h3 align=center>Index</h3>
 
 <ul>
-	<li><strong><a href="#-about-" style="color:white">About</a></strong></li>
+	<li><strong><a href="#-about-" style="color:white">Guide</a></strong></li>
 	<ul style="list-style-type:disc">
-		<li><a href="#-concepts-">1. Concepts</a></li>
+		<li><a href="#-concepts-">1. Introduction </a></li>
+		<li><a href="#-preprocessors-">2. Preprocessors </li>
 </ul>
 
 * [About](#-about-)
