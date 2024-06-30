@@ -188,7 +188,7 @@ Lastly, you have to protected it, build a door (very important) and lock it with
 
 In other words, we need to write a **1. Preprocessor Directives**, the **2. Functions** needed, and the key to the library, or simply, our **3. Makefile**
 
-<h2> 1. The Preprocessor Directives for Libft </h2>
+## <a name="#index-3-1"> 3.1. The Preprocessor Directives for Libft </a>
 
 So let's begin defining our library with:
 ```C
@@ -207,7 +207,7 @@ Which means
  	</ol>
 Our bookshelve is now created! So lets fill this with our books.
 
-<h2> 2. The Functions </h2>
+## <a name="#index-3-2"> 3.2. The Functions </a>
 
 This project comprises `43` functions divided into three sections:
 - **Mandatory Part 1**, a selection of `23` `libc` functions;
