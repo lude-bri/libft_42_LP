@@ -401,7 +401,7 @@ ___
 </details>
 
 -----
-## <a name="#index-3.3"> 3.3. Makefile </a>
+# <a name="#index-4"> 4. Makefile </a>
 
 Well, actually, the Makefile is a whole new topic. Quite amazing, I would say. Highly encourage you to read more about it. But, to summarize it, let's consider a few aspects of it.
 
@@ -410,16 +410,16 @@ Second, **why** do we need it? Lastly, **HOW** DO WE WRITE IT?
 
 Calm down! Here we have it:
 
-### <a name="#index-3-3-1"> 3.3.1. What is Makefile? </a>
+## <a name="#index-4-1"> 4.1. What is Makefile? </a>
 
 Makefiles are a simple way to organize code compilation. Also `make` is a program utility that automatically determines which parts of a large program need to be recompiled, and issues commands to recompile them. It reads instructions from a `Makefile` <br><br>
 The make utility is an automatic tool capable of deciding which commands can/should be executed.
   
-### <a name="#index-3-3-2"> 3.3.3. Why do we need Makefile? </a>
+## <a name="#index-4-2"> 4.2. Why do we need Makefile? </a>
 
 Build automation to build executable code (such as a program or **library**) from source code, preventing manual file-by-file compilation.
 
-### <a name="#index-3-3-2"> 3.3.3. How to Makefile? </a>
+## <a name="#index-4-3"> 4.3. How to Makefile? </a>
 
 The Makefile is called to handle the complitation and linking of projects and it's files. <br><br>
 
@@ -476,7 +476,7 @@ ar rcs libmylib.a obj_file1.o obj_file2.o obj_file3.o
 
 Perfect!! So how can we compile anyway?
 
-### <a name="#index-3-3-4"> 3.3.4. Compiling and Macros of Makefile </a>
+## <a name="#index-4-4"> 4.4. Compiling and Macros of Makefile </a>
 
 What compiling is? Shortly, its when your source code is transform into an object file and link these object files to transform them into a binary.
 
@@ -621,7 +621,7 @@ clean:
 
 So now you have a perfectly good makefile that you can modify to manage small and medium-sized software projects. You can add multiple rules to a makefile; you can even create rules that call other rules. For more information on makefiles and the make function, check out the [GNU Make Manual](www.gnu.org/software/make/manual/make.html), which will tell you more than you ever wanted to know (really).
 
-<h1> Finally! </h1>
+# <a name="#index-5"> Conclusion </a>
 Ok! Now that you know what a library is and how to build it, it is your chance to explore more and more in this project! Understanding the workings of libraries in C and the use of Makefiles is essential for efficient software development. Libraries in C provide a modular approach to coding, enabling the reuse of functions and promoting code organization and maintainability. Static and dynamic libraries offer different advantages, from faster execution times to reduced memory usage, depending on the application's needs. <br><br>
 
 
