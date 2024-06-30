@@ -15,8 +15,19 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 
 <ul>
 	<li><strong><a href="#index-1" style="color:white">1. Libraries </a></strong></li>
-	<li><strong><a href="#-2-preprocessors-" style="color:white">2. Preprocessors </a></strong></li>
+	<li><strong><a href="#index-2" style="color:white">2. Preprocessors </a></strong></li>
+	<ul style="list-style-type:disc">
+		<li><a href="#index-2-1"> 2.1. Preprocessor Directives in C</a></li>
+		<li><a href="#index-2-2"> 2.2. About Libraries... again </a></li>
+	</ul>
+	<li><strong><a href="#index-3" style="color:white">3. Building our first C Library </a></strong></li>
+	<ul style="list-style-type:disc">
+		<li><a href="#index-3-1"> 3.1. The Preprocessor Directives for Libft </a></li>
+		<li><a href="#index-3-2"> 3.2. The Functions </a></li>	
+	</ul>
+
 </ul>
+
 
 <!---------------------
 ## <a name="index-0">Index</a>
