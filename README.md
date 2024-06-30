@@ -14,10 +14,8 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 ## <a name="#index-0">Index</a>
 
 <ul>
-	<li><strong><a href="#-about-" style="color:white">Guide</a></strong></li>
-	<ul style="list-style-type:disc">
-		<li><a href="#-concepts-">1. Introduction </a></li>
-		<li><a href="#-preprocessors-">2. Preprocessors </li>
+	<li><strong><a href="#-concepts-" style="color:white">1. Libraries </a></strong></li>
+	<li><a href="#-preprocessors-">2. Preprocessors </li>
 </ul>
 
 * [About](#-about-)
@@ -82,7 +80,7 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 This is the firt main project of 42 School Common Core, `Libft`. Creating our first library in C!! Exciting, right!? Follow me and lets discover more about it!
 
 ----
-<h1> 1. Concepts </h1>
+# <a name="#index-1">Concepts</a>
 
 We must create a library in C! Okay... but what is a library? As you can imagine, its a lovely place, filled with possibilities! In our case, this place is simmilar to a repository, and the possibilities are our functions! Let's deep dive.
 
