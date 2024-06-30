@@ -18,18 +18,6 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 	<li><a href="#index-2">2. Preprocessors </li>
 </ul>
 
-* [About](#-about-)
-* [Concepts!](#-concepts-)
-* [Preprocessors](#-preprocessors-)
-	* [Preprocessor Directives in C](#-preprocessor-directives-in-c-)
-	* [About Libraries... again](#-about-libraries-again-)
- * [Building our first C Library](#building-our-first-c-library)
-   	* [1. The Preprocessor Directives for Libft](#-1-the-preprocessor-directives-for-libft-)
-   	* [2. The Functions](#-2-the-functions-)
-   	* [3. Makefile](#-3-makefile-)
- * [Finally](#-finally-)
-  * [License](#license)
-
 <!---------------------
 ## <a name="index-0">Index</a>
 <ul>
@@ -413,7 +401,7 @@ ___
 </details>
 
 -----
-<h2> 3. Makefile </h2>
+## <a name="#index-3.3"> 3.3. Makefile </a>
 
 Well, actually, the Makefile is a whole new topic. Quite amazing, I would say. Highly encourage you to read more about it. But, to summarize it, let's consider a few aspects of it.
 
@@ -422,14 +410,17 @@ Second, **why** do we need it? Lastly, **HOW** DO WE WRITE IT?
 
 Calm down! Here we have it:
 
-<h3> 1. What </h3>
+### <a name="#index-3-3-1"> 3.3.1. What is Makefile? </a>
+
 Makefiles are a simple way to organize code compilation. Also `make` is a program utility that automatically determines which parts of a large program need to be recompiled, and issues commands to recompile them. It reads instructions from a `Makefile` <br><br>
 The make utility is an automatic tool capable of deciding which commands can/should be executed.
   
- <h3> 2. Why? </h3>
+### <a name="#index-3-3-2"> 3.3.3. Why do we need Makefile? </a>
+
 Build automation to build executable code (such as a program or **library**) from source code, preventing manual file-by-file compilation.
 
-<h3>3. How? </h3>
+### <a name="#index-3-3-2"> 3.3.3. How to Makefile? </a>
+
 The Makefile is called to handle the complitation and linking of projects and it's files. <br><br>
 
 The core of the makefile consists of rules defined as follows:
@@ -485,7 +476,7 @@ ar rcs libmylib.a obj_file1.o obj_file2.o obj_file3.o
 
 Perfect!! So how can we compile anyway?
 
-<h3> Compiling and Macros of Makefile </h3>
+### <a name="#index-3-3-4"> 3.3.4. Compiling and Macros of Makefile </a>
 
 What compiling is? Shortly, its when your source code is transform into an object file and link these object files to transform them into a binary.
 
@@ -647,5 +638,4 @@ Together, the use of libraries and Makefiles can significantly enhance the devel
 This work is published under the terms of <a href="https://github.com/lude-bri/42_Common_Core/blob/main/LICENSE.md">42 Unlicense</a>.
 
 <p align="right">(<a href="#readme-top">get to top</a>)</p>
-
 
