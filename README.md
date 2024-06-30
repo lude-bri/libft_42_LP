@@ -25,7 +25,14 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 		<li><a href="#index-3-1"> 3.1. The Preprocessor Directives for Libft </a></li>
 		<li><a href="#index-3-2"> 3.2. The Functions </a></li>	
 	</ul>
-
+	<li><strong><a href="#index-3" style="color:white">4. Makefile </a></strong></li>
+ 	<ul style="list-style-type:disc">
+		<li><a href="#index-3-1"> 4.1. What is Makefile? </a></li>
+		<li><a href="#index-3-2"> 4.2. Why do we need Makefile? </a></li>
+		<li><a href="#index-3-2"> 4.3. How to Makefile? </a></li>
+		<li><a href="#index-3-2"> 4.4. Compiling and Macros of Makefile </a></li>
+ 	</ul>
+	<li><strong><a href="#index-3" style="color:white">5. Conclusion </a></strong></li>
 </ul>
 
 ------------------------------------------------------------------
@@ -57,7 +64,7 @@ The `#include` command allows two syntaxes:
 #include <unistd.h>  " Standard Library
 #include "libft.h"   " Non standart Library
 ```
-
+> [!NOTE]
 > In general, library files in the C language end with the extension .h
 
 In order to understand more about the topic, let's talk about the **preprocessors**!
