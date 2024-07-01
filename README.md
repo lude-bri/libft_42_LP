@@ -505,12 +505,11 @@ ___
 -----
 # <a name="#index-4"> 4. Makefile </a>
 
-Well, actually, the Makefile is a whole new topic. Quite amazing, I would say. Highly encourage you to read more about it. But, to summarize it, let's consider a few aspects of it.
+Makefile is a whole fantastic topic (really). That's why in here we are going to see very briefly what a Makefile is and how to build it to our Library.
 
-First, **what** is a Makefile?
-Second, **why** do we need it? Lastly, **HOW** DO WE WRITE IT?
+I highly recommend you to deep dive in this topic. It's is indeed an amazing journey.
 
-Calm down! Here we have it:
+So first, What, Why and How?
 
 ## <a name="#index-4-1"> 4.1. What is Makefile? </a>
 
