@@ -580,147 +580,51 @@ Perfect!!
 
 Knowing this, here you can see a very simple Makefile to compile and create a library!
 
-```Makefile
-
-```
-
-## <a name="#index-4-4"> 4.4. Compiling and Macros of Makefile </a>
-
-What compiling is? Shortly, its when your source code is transform into an object file and link these object files to transform them into a binary.
-
-If we use `Makefile` to compile, how exactly we do it?
-
-Let's look at this [example](https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/) writen by Bruce Maxwell in the Colby Computer Science College considering 3 files: `hellomake.c`, `hellofunc.c` and `hellomake.h`
-
-```C
-//FILE 1
-#include <hellomake.h>
-
-int main() {
-  // call a function in another file
-  myPrintHelloMake();
-
-  return(0);
-}
-
-```
-
-```C
-//FILE 2
-#include <stdio.h>
-#include <hellomake.h>
-
-void myPrintHelloMake(void) {
-
-  printf("Hello makefiles!\n");
-
-  return;
-}
-```
-
-```C
-//FILE 3
-
-/*
-example include file
-*/
-
-void myPrintHelloMake(void);
-
-```
-
-Normally, you would compile this collection of code by executing the following command:
-
-```C
- gcc -o hellomake hellomake.c hellofunc.c -I.
-```
-
-This compiles the two `.c` files and names the executable hellomake. The `-I`. is included so that gcc will look in the current directory (.) for the include file hellomake.h. Without a makefile, the typical approach to the test/modify/debug cycle is to use the up arrow in a terminal to go back to your last compile command so you don't have to type it each time, especially once you've added a few more `.c` files to the mix.
-
-Unfortunately, this approach to compilation has two downfalls. First, if you lose the compile command or switch computers you have to retype it from scratch, which is inefficient at best. Second, if you are only making changes to one .c file, recompiling all of them every time is also time-consuming and inefficient. So, it's time to see what we can do with a makefile.
-
-The simplest makefile you could create would look something like:
+This example is considering the compilation with `cc` and some particular flags. The sources of the library (`SCR`) in this case are the functions of the Libft project.
 
 ```Makefile
-hellomake: hellomake.c hellofunc.c
-     gcc -o hellomake hellomake.c hellofunc.c -I.
-```
+#########################
+#	MACROS		#
+#########################
 
-In order to be a bit more efficient, let's try the following:
+CC = cc 
+CFLAGS = -Wall -Wextra -Werror 
+RM = rm -rf 
+NAME = libft.a
 
-```Makefile
-CC=gcc
-CFLAGS=-I.
+#########################
+#  Sources and Objects	#
+#########################
 
-hellomake: hellomake.o hellofunc.o
-     $(CC) -o hellomake hellomake.o hellofunc.o
-```
+SRCS = ft_isalpha.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
+	ft_strlcpy.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+	ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c \
+	ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c \
+	ft_substr.c ft_strjoin.c ft_strtrim.c ft_striteri.c ft_strmapi.c \
+	ft_putstr_fd.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-So now we've defined some constants `CC` and `CFLAGS`. It turns out these are special constants that communicate to make how we want to compile the files `hellomake.c` and `hellofunc.c`. In particular, the **macro** `CC` **is the C compiler to use**, and `CFLAGS` is the list of flags to pass to the compilation command. By putting the object files--hellomake.o and hellofunc.o--in the dependency list and in the rule, `make` knows it must first compile the .c versions individually, and then build the executable hellomake.
+OBJS = $(SRCS:.c=.o) 
 
-Using this form of makefile is sufficient for most small scale projects. However, there is one thing missing: dependency on the include files. If you were to `make` a change to hellomake.h, for example, make would not recompile the .c files, even though they needed to be. In order to fix this, we need to tell `make` that all .c files depend on certain .h files. We can do this by writing a simple rule and adding it to the makefile.
+#########################
+#  	  Rules 	#
+#########################
 
-```Makefile
-CC=gcc
-CFLAGS=-I.
-DEPS = hellomake.h
+all: $(NAME)
 
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
-
-hellomake: hellomake.o hellofunc.o 
-	$(CC) -o hellomake hellomake.o hellofunc.o 
-```
-
-This addition first creates the macro DEPS, which is the set of .h files on which the .c files depend. Then we define a rule that applies to all files ending in the .o suffix. The rule says that the .o file depends upon the .c version of the file and the .h files included in the DEPS macro. The rule then says that to generate the .o file, `make` needs to compile the .c file using the compiler defined in the CC macro. The -c flag says to generate the object file, the `-o $@` says to put the output of the compilation in the file named on the left side of the `:`, the `$<` is the first item in the dependencies list, and the CFLAGS macro is defined as above.
-
-As a final simplification, let's use the special macros `$@` and `$^`, which are the left and right sides of the `:`, respectively, to make the overall compilation rule more general. In the example below, all of the include files should be listed as part of the macro DEPS, and all of the object files should be listed as part of the macro OBJ.
-
-```Makefile
-CC=gcc
-CFLAGS=-I.
-DEPS = hellomake.h
-OBJ = hellomake.o hellofunc.o 
-
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
-
-hellomake: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS)
-```
-
-So what if we want to start putting our .h files in an include directory, our source code in a src directory, and some local libraries in a lib directory? Also, can we somehow hide those annoying .o files that hang around all over the place? The answer, of course, is yes. The following makefile defines paths to the include and lib directories, and places the object files in an obj subdirectory within the src directory. It also has a macro defined for any libraries you want to include, such as the math library `-lm`. This makefile should be located in the src directory. Note that it also includes a rule for cleaning up your source and object directories if you type `make clean`. The .PHONY rule keeps `make` from doing something with a file named clean.
-
-```Makefile
-IDIR =../include
-CC=gcc
-CFLAGS=-I$(IDIR)
-
-ODIR=obj
-LDIR =../lib
-
-LIBS=-lm
-
-_DEPS = hellomake.h
-DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
-
-_OBJ = hellomake.o hellofunc.o 
-OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
-
-
-$(ODIR)/%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
-
-hellomake: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
-
-.PHONY: clean
+$(NAME): $(OBJS)
+	ar rc $(NAME) $(OBJS)
 
 clean:
-	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ 
+	$(RM) $(OBJS)
+fclean: clean
+	$(RM) $(NAME)
+re: fclean
+	$(MAKE) all
+
 ```
 
-So now you have a perfectly good makefile that you can modify to manage small and medium-sized software projects. You can add multiple rules to a makefile; you can even create rules that call other rules. For more information on makefiles and the make function, check out the [GNU Make Manual](www.gnu.org/software/make/manual/make.html), which will tell you more than you ever wanted to know (really).
+Makefile is a wonderful world. There is much to be explore. Now you have a perfectly good and simple makefile that you can modify to manage small and medium-sized software projects. You can add multiple rules to a makefile; you can even create rules that call other rules. For more information on makefiles and the make function, check out the [GNU Make Manual](www.gnu.org/software/make/manual/make.html), which will tell you more than you ever wanted to know (really).
+
 
 # <a name="#index-5"> Conclusion </a>
 Ok! Now that you know what a library is and how to build it, it is your chance to explore more and more in this project! Understanding the workings of libraries in C and the use of Makefiles is essential for efficient software development. Libraries in C provide a modular approach to coding, enabling the reuse of functions and promoting code organization and maintainability. Static and dynamic libraries offer different advantages, from faster execution times to reduced memory usage, depending on the application's needs. <br><br>
