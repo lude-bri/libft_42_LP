@@ -46,6 +46,12 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 	<li><strong><a href="#-conclusion-" style="color:white">5. Conclusion </a></strong></li>
 </ul>
 
+<div align="center">
+<ul>
+	<li><strong><a href="#usage"> # Usage of Libft #</a></strong></li>
+</ul>
+	</div>
+ 
 ------------------------------------------------------------------
 ----
 # <a name="#index-1">1. Libraries</a>
