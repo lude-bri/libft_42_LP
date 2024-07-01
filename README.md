@@ -96,6 +96,10 @@ There are two basic ways of how library works. This one showed above is know as 
 	</li>
 </ul>
 
+<div align=center>
+	<image src=images/static-dynamic.png>
+</div>
+
 <br>
 
 -----
