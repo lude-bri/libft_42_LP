@@ -566,7 +566,7 @@ Easy!
 </ol>
 
 To create a library:
-```bash
+```Makefile
 ar rcs libmylib.a obj_file1.o obj_file2.o obj_file3.o
 
 # in other words
@@ -576,7 +576,13 @@ ar rcs libmylib.a obj_file1.o obj_file2.o obj_file3.o
 	s - Write an object-file index into the archive, or update an existing one, even if no other change is made to the archive.
 ```
 
-Perfect!! So how can we compile anyway?
+Perfect!! 
+
+Knowing this, here you can see a very simple Makefile to compile and create a library!
+
+```Makefile
+
+```
 
 ## <a name="#index-4-4"> 4.4. Compiling and Macros of Makefile </a>
 
