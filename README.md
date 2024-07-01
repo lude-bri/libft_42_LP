@@ -122,6 +122,15 @@ In C, to call a library we must use in the begining of our file a Preprocessor, 
 -----
 # <a name="#index-2"> 2. Preprocessors </a>
 
+Preprocessors are programs that process the source code before compilation.
+
+It means that before even reading the code, it will take into account what is defined, almost like rules, and the program will execute accordingly the rules we've set.
+
+In C programming, preprocessing is the first step in the compilation of a C code. One of the important functions of a preprocessor is to include the header files that contain the library functions used in the program. The preprocessor in C also defines the constants and expands the macros.[(see more)](https://www.tutorialspoint.com/cprogramming/c_preprocessors.htm)
+
+> [!IMPORTANT]
+> A Macro in C is essentially a piece of code or a value that is associated with an identifier. This identifier, known as the macro name, is defined using the #define preprocessor directive.
+
 Whenever we use `#include`, we are informing the **preprocessor** to handle the contents of a specified file. In other words, we tell the computer to look up that standard library and read the following code according to the rules defined by the library!
 
 The `#include` command allows two syntaxes:
@@ -138,17 +147,6 @@ The `#include` command allows two syntaxes:
 > [!NOTE]
 > In general, library files in the C language end with the extension .h
 
-To understand more about the topic, let's talk about the **preprocessors**!
-
-
-Preprocessors is a program that processes its input data to produce output that is used as input in another program!
-
-It means that before even reading the code, it will take into account what is defined, almost like rules, and the program will execute accordingly the rules we've set. 
-
-In C programming, preprocessing is the first step in the compilation of a C code. It occurs before the tokenization step. One of the important functions of a preprocessor is to include the header files that contain the library functions used in the program. The preprocessor in C also defines the constants and expands the macros.[(see more)](https://www.tutorialspoint.com/cprogramming/c_preprocessors.htm)
-
-> [!IMPORTANT]
-> A Macro in C is essentially a piece of code or a value that is associated with an identifier. This identifier, known as the macro name, is defined using the #define preprocessor directive
 
 ## <a name="#index-2-1"> 2.1. Preprocessor Directives in C </a>
 
@@ -173,6 +171,18 @@ The following [table](https://www.tutorialspoint.com/cprogramming/c_preprocessor
 | #pragma	|	Issues special commands to the compiler, using a standardized method.
 
 </div>
+
+These preprocessors can be classified based on the type of function they perform.
+
+## 2.2. Types of Preprocessors Directives
+
+There are 4 main types of preprocessors directives
+<ol>
+	<li><strong>Macros</strong></li>
+	<li><strong>File Inclusion</strong></li>
+ 	<li><strong>Conditional Compilation</strong></li>
+	<li><strong>Other directives</strong></li>
+</ol>
 
 ## <a name="#index-2-2"> 2.2. About Libraries... again </a>
 
