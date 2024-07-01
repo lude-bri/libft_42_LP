@@ -40,7 +40,6 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 		<li><a href="#-41-what-is-makefile-"> 4.1. What is Makefile? </a></li>
 		<li><a href="#-42-why-do-we-need-makefile-"> 4.2. Why do we need Makefile? </a></li>
 		<li><a href="#-43-how-to-makefile-"> 4.3. How to Makefile? </a></li>
-		<li><a href="#-44-compiling-and-macros-of-makefile-"> 4.4. Compiling and Macros of Makefile </a></li>
  	</ul>
 	<li><strong><a href="#-conclusion-" style="color:white">5. Conclusion </a></strong></li>
 </ul>
