@@ -21,28 +21,28 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 	</ul>
 	<li><strong><a href="#-2-preprocessors-" style="color:white">2. Preprocessors </a></strong></li>
 	<ul style="list-style-type:disc">
-		<li><a href="#-21-preprocessor-directives-in-c"> 2.1. Preprocessor Directives in C</a></li>
-		<li><a href="#-21-preprocessor-directives-in-c"> 2.2. Types of Preprocessors Directives</a></li>
+		<li><a href="#-21-preprocessor-directives-in-c-"> 2.1. Preprocessor Directives in C</a></li>
+		<li><a href="#22-types-of-preprocessors-directives"> 2.2. Types of Preprocessors Directives</a></li>
   		<ul style="list-style-type:square">
-  			<li><a href="#-21-preprocessor-directives-in-c"> 2.1.1. Macros </a></li>
-			<li><a href="#-21-preprocessor-directives-in-c"> 2.1.2. File Inclusion </a></li>
-			<li><a href="#-21-preprocessor-directives-in-c"> 2.1.3. Conditional Compilation </a></li>
+  			<li><a href="#221-macros"> 2.1.1. Macros </a></li>
+			<li><a href="#222-file-inclusion"> 2.1.2. File Inclusion </a></li>
+			<li><a href="#223-conditional-compilation"> 2.1.3. Conditional Compilation </a></li>
 		</ul>
-		<li><a href="#index-2-2"> 2.3. About Libraries... again </a></li>
+		<li><a href="#23-about-libraries-again"> 2.3. About Libraries... again </a></li>
 	</ul>
-	<li><strong><a href="#index-3" style="color:white">3. Building our first C Library </a></strong></li>
+	<li><strong><a href="#-3-building-our-first-c-library-" style="color:white">3. Building our first C Library </a></strong></li>
 	<ul style="list-style-type:disc">
-		<li><a href="#index-3-1"> 3.1. The Preprocessor Directives for Libft </a></li>
-		<li><a href="#index-3-2"> 3.2. The Functions </a></li>	
+		<li><a href="#-31-the-preprocessor-directives-for-libft-"> 3.1. The Preprocessor Directives for Libft </a></li>
+		<li><a href="#-32-the-functions-"> 3.2. The Functions </a></li>	
 	</ul>
-	<li><strong><a href="#index-3" style="color:white">4. Makefile </a></strong></li>
+	<li><strong><a href="#-4-makefile-" style="color:white">4. Makefile </a></strong></li>
  	<ul style="list-style-type:disc">
-		<li><a href="#index-3-1"> 4.1. What is Makefile? </a></li>
-		<li><a href="#index-3-2"> 4.2. Why do we need Makefile? </a></li>
-		<li><a href="#index-3-2"> 4.3. How to Makefile? </a></li>
-		<li><a href="#index-3-2"> 4.4. Compiling and Macros of Makefile </a></li>
+		<li><a href="#-41-what-is-makefile-"> 4.1. What is Makefile? </a></li>
+		<li><a href="#-42-why-do-we-need-makefile-"> 4.2. Why do we need Makefile? </a></li>
+		<li><a href="#-43-how-to-makefile-"> 4.3. How to Makefile? </a></li>
+		<li><a href="#-44-compiling-and-macros-of-makefile-"> 4.4. Compiling and Macros of Makefile </a></li>
  	</ul>
-	<li><strong><a href="#index-3" style="color:white">5. Conclusion </a></strong></li>
+	<li><strong><a href="#-conclusion-" style="color:white">5. Conclusion </a></strong></li>
 </ul>
 
 ------------------------------------------------------------------
