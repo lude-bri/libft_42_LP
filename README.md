@@ -78,6 +78,14 @@ You can see the folowing scheme the two important processes for this to work: **
 
 As you can see, the library, represented in here as `.lib` is linked with the objects `.o` to create our executable program!
 
+Those processes normally happen at the same time. As showned, our program `.c` goes to a compiling process first.
+
+Compiling is the process that translate our program to our computer in machine language. The compiling process read first the Preprocessor (we are going to see this later), understands the rules and libraries implied, and then compiles.
+
+When it is compiled into Assembly code, the assembler give us an object file (`.o`).
+
+It is with the object file and libraries that the linker combines all in one single executable file so we can use our program.
+
 ## Static library and Dinamic library
 
 There are two basic ways of how library works. This one showed above is know as being the **Static Library**, but we can also see **Dynamic Library**
@@ -92,7 +100,7 @@ There are two basic ways of how library works. This one showed above is know as 
 
 <ul>
 	<li>
-		<strong>Dynamic libraries (.so)</strong> files in Unix/Linux, .dll files in Windows) are linked at runtime.
+		<strong>Dynamic libraries (.so)</strong> are linked at runtime of the application.
 	</li>
 </ul>
 
@@ -100,16 +108,25 @@ There are two basic ways of how library works. This one showed above is know as 
 	<image src=images/static-dynamic.png>
 </div>
 
+As you can see, we have major differences. 
+
+In **Static Libraries** (.a), the library is locked into the program at compile time so cannot be modified without recompilation. You can have bigger libraries, but they are slower due to the compilation->linking process.
+
+In **Dynamic Libraries** (.so), only the address of the library is provided in the target program so every program can access them without creating copies. Also it resides out of the the executable, so program makes only one copy of library at compile time. Normally they're smaller libraries, but way faster due to the fact that the functions are dynamically used by applications, not compiling and recompiling in every use.
 <br>
+
+In our case, the Libft project askes us to create an Static Library.
+
+In C, to call a library we must use in the begining of our file a Preprocessor, so the compiler understands the rules and functions that will be used in our program. So let's talk about preprocessors.
 
 -----
 # <a name="#index-2"> 2. Preprocessors </a>
 
-Whenever we use `#include`, we are informing the **preprocessor** to handle the contents of a specified file. In other words, we tell the computer to look up that standard library (or dictionary, in our analogy) and read the following code according to the rules defined by the library!
+Whenever we use `#include`, we are informing the **preprocessor** to handle the contents of a specified file. In other words, we tell the computer to look up that standard library and read the following code according to the rules defined by the library!
 
 The `#include` command allows two syntaxes:
 <ul>
- 	<li> <strong> #include < library_name ></strong> : the preprocessor will search for the library in the compiler's pre-specified search paths. We use this syntax when we are including a library that is system-specific, such as <stdio.h> and <stdlib.h> </li> <br>
+ 	<li> <strong> #include < library_name ></strong> : the preprocessor will search for the library in the compiler's pre-specified search paths. We use this syntax when we are including a library that is system-specific, such as < stdio.h > and < stdlib.h ></li> <br>
    	<li><strong> #include "library_name"</strong> : the preprocessor will look for the library in the same directory where our program is located. We can also choose to inform the name of the file with the full path, that is, in which directory it is located and how to get there </li>
 	</ul>
 
