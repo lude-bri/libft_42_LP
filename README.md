@@ -15,9 +15,17 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 
 <ul>
 	<li><strong><a href="#1-libraries" style="color:white">1. Libraries </a></strong></li>
+	<ul style="list-style-type:disc">
+		<li><a href="#11-how-libraries-works-linker-"> 1.1. How Libraries works: Linker</a></li>
+		<li><a href="#12-static-library-and-dynamic-library"> 1.2. Static library and Dynamic library</a></li>
+	</ul>
 	<li><strong><a href="#-2-preprocessors-" style="color:white">2. Preprocessors </a></strong></li>
 	<ul style="list-style-type:disc">
-		<li><a href="#index-2-1"> 2.1. Preprocessor Directives in C</a></li>
+		<li><a href="#-21-preprocessor-directives-in-c"> 2.1. Preprocessor Directives in C</a></li>
+		<li><a href="#-21-preprocessor-directives-in-c"> 2.2. Types of Preprocessors Directives</a></li>
+  		<ul style="list-style-type:square">
+  			<li><a href="#-21-preprocessor-directives-in-c"> 2.1.1. Macros </a></li>
+		</ul>
 		<li><a href="#index-2-2"> 2.2. About Libraries... again </a></li>
 	</ul>
 	<li><strong><a href="#index-3" style="color:white">3. Building our first C Library </a></strong></li>
@@ -86,7 +94,7 @@ When it is compiled into Assembly code, the assembler give us an object file (`.
 
 It is with the object file and libraries that the linker combines all in one single executable file so we can use our program.
 
-## Static library and Dinamic library
+## 1.2. Static library and Dynamic library
 
 There are two basic ways of how library works. This one showed above is know as being the **Static Library**, but we can also see **Dynamic Library**
 
@@ -131,23 +139,6 @@ In C programming, preprocessing is the first step in the compilation of a C code
 > [!IMPORTANT]
 > A Macro in C is essentially a piece of code or a value that is associated with an identifier. This identifier, known as the macro name, is defined using the #define preprocessor directive.
 
-Whenever we use `#include`, we are informing the **preprocessor** to handle the contents of a specified file. In other words, we tell the computer to look up that standard library and read the following code according to the rules defined by the library!
-
-The `#include` command allows two syntaxes:
-<ul>
- 	<li> <strong> #include < library_name ></strong> : the preprocessor will search for the library in the compiler's pre-specified search paths. We use this syntax when we are including a library that is system-specific, such as < stdio.h > and < stdlib.h ></li> <br>
-   	<li><strong> #include "library_name"</strong> : the preprocessor will look for the library in the same directory where our program is located. We can also choose to inform the name of the file with the full path, that is, in which directory it is located and how to get there </li>
-	</ul>
-
- Example:
- ```C
-#include <unistd.h>  " Standard Library
-#include "libft.h"   " Non standart Library
-```
-> [!NOTE]
-> In general, library files in the C language end with the extension .h
-
-
 ## <a name="#index-2-1"> 2.1. Preprocessor Directives in C </a>
 
 The preprocessor statements in C are called directives. A preprocessor section of the program always appears at the top of the C code. Each preprocessor statement starts with the hash (#) symbol.
@@ -176,13 +167,72 @@ These preprocessors can be classified based on the type of function they perform
 
 ## 2.2. Types of Preprocessors Directives
 
-There are 4 main types of preprocessors directives
+There are 3 main types of preprocessors directives 
 <ol>
 	<li><strong>Macros</strong></li>
 	<li><strong>File Inclusion</strong></li>
  	<li><strong>Conditional Compilation</strong></li>
-	<li><strong>Other directives</strong></li>
 </ol>
+
+### 2.2.1. Macros
+
+Macros is a sort of abbreviation which you can define once an then use later.
+
+Before you can use a macro, you must **define** it explicitly with the `#define` directive followed by the name of the macro and the code it should be an abbreviation for. [Math Utah](https://www.math.utah.edu/docs/info/cpp_1.html#SEC10)
+
+Example:
+```C
+#define BUFFER_SIZE 42
+```
+
+We can also expand the use of macros with some specific arguments, for instance:
+```C
+// here is a macro that computes the absolute number of two numeric values. 
+#define abs((n < 0) ? -n : n)
+```
+
+You can also find some Predifiend Macros in C which are useful in providing various functionalities to our program.[Geek for Geeks](https://www.geeksforgeeks.org/cc-preprocessors/)
+   
+### 2.2.2. File Inclusion
+This type of preprocessor directive tells the compilter to include a file in the source program. Just like `#include`.
+
+Whenever we use `#include`, we are informing the **preprocessor** to handle the contents of a specified file. In other words, we tell the computer to look up that standard library and read the following code according to the rules defined by the library!
+
+The `#include` preprocessor directive is used to include the header files (`.h`)in the C program.
+
+The `#include` command allows two syntaxes:
+<ul>
+ 	<li> <strong> #include < library_name ></strong> : the preprocessor will search for the library in the compiler's pre-specified search paths. We use this syntax when we are including a library that is system-specific, such as < stdio.h > and < stdlib.h ></li> <br>
+   	<li><strong> #include "library_name"</strong> : the preprocessor will look for the library in the same directory where our program is located. We can also choose to inform the name of the file with the full path, that is, in which directory it is located and how to get there </li>
+	</ul>
+
+ Example:
+ ```C
+#include <unistd.h>  " Standard Library
+#include "libft.h"   " Non standart Library
+```
+> [!NOTE]
+> In general, library files in the C language end with the extension .h
+
+
+### 2.2.3. Conditional Compilation
+This is a type of directive that helps to compile a specific portion of the program or to skip the compilation of some specific part of the program based on some conditions.
+
+For instance:
+```C
+#ifdef macro_name
+	// Code to be executed if macro_name is defined
+#ifndef macro_name
+	// Code to be executed if macro_name is not defined
+#if constat_expr
+	// Code to be executed if constant_expression is true
+#elif another_constant_expr
+	// Code to be executed if another_constant_expression is true
+#else
+	// Code to be executed if none of the above conditions are true
+#endif
+	// Code to end conditional compilation
+```
 
 ## <a name="#index-2-2"> 2.2. About Libraries... again </a>
 
@@ -529,13 +579,6 @@ Perfect!! So how can we compile anyway?
 ## <a name="#index-4-4"> 4.4. Compiling and Macros of Makefile </a>
 
 What compiling is? Shortly, its when your source code is transform into an object file and link these object files to transform them into a binary.
-
-Like this:
-<p align="center">
-	<img src="https://embarcados.com.br/wp-content/uploads/2017/09/makefile-1.jpg">
-</p>
-
-To know more about compiling, read more in [here](https://unstop.com/blog/compilation-in-c)
 
 If we use `Makefile` to compile, how exactly we do it?
 
