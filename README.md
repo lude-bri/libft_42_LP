@@ -25,8 +25,10 @@ This is the firt main project of 42 School Common Core, `Libft`. Creating our fi
 		<li><a href="#-21-preprocessor-directives-in-c"> 2.2. Types of Preprocessors Directives</a></li>
   		<ul style="list-style-type:square">
   			<li><a href="#-21-preprocessor-directives-in-c"> 2.1.1. Macros </a></li>
+			<li><a href="#-21-preprocessor-directives-in-c"> 2.1.2. File Inclusion </a></li>
+			<li><a href="#-21-preprocessor-directives-in-c"> 2.1.3. Conditional Compilation </a></li>
 		</ul>
-		<li><a href="#index-2-2"> 2.2. About Libraries... again </a></li>
+		<li><a href="#index-2-2"> 2.3. About Libraries... again </a></li>
 	</ul>
 	<li><strong><a href="#index-3" style="color:white">3. Building our first C Library </a></strong></li>
 	<ul style="list-style-type:disc">
@@ -234,7 +236,7 @@ For instance:
 	// Code to end conditional compilation
 ```
 
-## <a name="#index-2-2"> 2.2. About Libraries... again </a>
+## 2.3. About Libraries... again
 
 The C language allows us to create our own library. In it, we can place our functions, structures, etc., which makes it more practical and easier to use in other projects.
 
