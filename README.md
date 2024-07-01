@@ -8,9 +8,11 @@
 
 ## About
 
-This is the firt main project of 42 School Common Core, `Libft`. Creating our first library in C!! Exciting, right!? Follow me and lets discover more about it!
+This is the firt main project of 42 School Common Core, `Libft`. Creating our first C Library. In this text you'll find what libraries are and how they work. You'll see about Preprocessors and Preprocessor Directives in C and also, we're going to discuss about the usage of some fundamental functions and how to combine all of this with the Makefile.
 
 ----
+<!-------Index-------->
+
 ## <a name="#index-0">Index</a>
 
 <ul>
@@ -627,14 +629,37 @@ Makefile is a wonderful world. There is much to be explore. Now you have a perfe
 # <a name="#index-5"> Conclusion </a>
 Ok! Now that you know what a library is and how to build it, it is your chance to explore more and more in this project! Understanding the workings of libraries in C and the use of Makefiles is essential for efficient software development. Libraries in C provide a modular approach to coding, enabling the reuse of functions and promoting code organization and maintainability. Static and dynamic libraries offer different advantages, from faster execution times to reduced memory usage, depending on the application's needs. <br><br>
 
-
 Makefiles, on the other hand, streamline the build process by automating the compilation and linking stages. They ensure that only the necessary parts of a project are rebuilt, saving time and reducing the potential for errors. With the ability to define dependencies and custom build rules, Makefiles are powerful tools for managing complex projects!! <br>
 
 Together, the use of libraries and Makefiles can significantly enhance the development workflow, leading to more robust and scalable software solutions. By mastering these tools, software engineers and developers can improve their productivity and ensure their code is both efficient and maintainable. <br>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=150&color=0ABAB5&text=Good%20Job!&section=footer&fontColor=fcf3f2&fontAlignY=46" />
+<!---<img src="https://capsule-render.vercel.app/api?type=waving&height=150&color=0ABAB5&text=Good%20Job!&section=footer&fontColor=fcf3f2&fontAlignY=46" />-->
+	<img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&text=end&section=header" />
 </p>
+
+# Usage
+
+## Setup & Compilation
+
+1. Clone repository:
+
+```sh
+git clone git@github.com:lude-bri/libft_42_LP.git
+```
+
+2. Go inside the project folder and run `make`:
+
+```sh
+cd libft
+make
+```
+
+3. To use the library on your code base `#include` the following header:
+
+```c
+#include "libft.h"
+```
 
 ### License
 
