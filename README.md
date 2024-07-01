@@ -276,15 +276,18 @@ In `Libft` project, we're going to create our library called Libft using `.c` fu
 <h5 align="center" > this is you after finishing your Libft </h5>
 </p>
 <br>
-Ok! Now it's time to get serious. Let's imagine that you're building in your house a very lovely library. How this would look like? I know.. you may be asking, what does this has to do with Libft? Well, everything!<br>
+Ok! Now it's time to get serious. Let's imagine that you're building in your house a very lovely library. How this would look like? I know. you may be asking, what does this have to do with Libft? Well, everything!
 
-<br> First of all, it's a must to have bookshelves, an structure, for you to have your books placed in order, so when you need to read something, you'll have no troubles finding it.
+First of all, it's a must to have bookshelves and structure, for you to have your books placed in order, so when you need to read something, you'll have no trouble finding it.
+After that, and most importantly, the books! Which are going to be the books? And why?
 
-After that, and most important, the books! Which are going to be the books? And why? 
-
-Lastly, you have to protected it, build a door (very important) and lock it with a key. That key will be important for us to access your fabulous library.
-
-In other words, we need to write a **1. Preprocessor Directives**, the **2. Functions** needed, and the key to the library, or simply, our **3. Makefile**
+Lastly, you have to protect it, build a door (very important) and lock it with a key. That key will be important for us to access your fabulous library.
+In other words, we need to write a 
+<ol>
+	<li><strong>Preprocessor Directives</strong></li>
+	<li><strong>Functions needed</strong></li>
+	<li><strong>Makefile</strong></li>
+</ol>
 
 ## <a name="#index-3-1"> 3.1. The Preprocessor Directives for Libft </a>
 
