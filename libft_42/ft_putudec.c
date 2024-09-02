@@ -18,13 +18,7 @@ int	ft_putudec(unsigned int n)
 	int		count;
 
 	count = 0;
-	if (n < 0)
-	{
-		write(1, "-", 1);
-		n = -n;
-		ft_putnbr(n);
-	}
-	else if (n > 9)
+	if (n > 9)
 	{
 		ft_putnbr(n / 10);
 		ft_putnbr(n % 10);
