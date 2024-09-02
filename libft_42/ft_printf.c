@@ -62,6 +62,8 @@ static int	f_specifiers(char str, va_list a)
 	return (count);
 }
 
+
+/*
 int	main(void)
 {
 	char c = 'k'; // %c
@@ -98,3 +100,5 @@ int	main(void)
 	// printf("%x", bts);
 	// return (0);
 }
+
+*/
