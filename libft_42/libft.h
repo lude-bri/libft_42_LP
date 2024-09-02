@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -71,5 +72,16 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+
+//plus
+int		ft_putchar(char c);
+int		ft_printf(const char *s, ...);
+int		ft_puthex(char str, unsigned int n);
+int		ft_putnbr(int n);
+int		ft_putptr(long int n);
+int		ft_puthexlong(int long n);
+int		ft_putstr(char *s);
+int		ft_putudec(unsigned int n);
 
 #endif
