@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@42student.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:23:00 by lude-bri          #+#    #+#             */
-/*   Updated: 2024/05/01 15:31:26 by lude-bri         ###   ########.fr       */
+/*   Updated: 2024/09/09 16:22:19 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,6 @@ int		ft_putptr(long int n);
 int		ft_puthexlong(int long n);
 int		ft_putstr(char *s);
 int		ft_putudec(unsigned int n);
+int		ft_abs(int n);
 
 #endif
