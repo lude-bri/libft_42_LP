@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lude-bri <lude-bri@42student.fr>           +#+  +:+       +#+        */
+/*   By: Luigi <Luigi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:23:00 by lude-bri          #+#    #+#             */
-/*   Updated: 2024/09/13 17:39:16 by luigi            ###   ########.fr       */
+/*   Updated: 2024/09/15 17:31:52 by Luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
 
 # include <stdio.h>
 # include <unistd.h>
@@ -73,7 +77,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-
 //plus
 int		ft_putchar(char c);
 int		ft_printf(const char *s, ...);
@@ -85,6 +88,10 @@ int		ft_putstr(char *s);
 int		ft_putudec(unsigned int n);
 int		ft_abs(int n);
 char	*ft_strncat(char *dest, char *src, unsigned int n);
+char	*ft_strjoin_gnl(char *txt, char *buff);
+char	*ft_strchr_gnl(char *txt, int c);
+size_t	ft_strlen_gnl(char *s);
+char    *get_next_line(int fd);
 
 
 #endif
