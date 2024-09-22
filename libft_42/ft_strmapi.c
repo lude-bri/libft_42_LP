@@ -12,6 +12,25 @@
 
 #include "libft.h"
 
+/**
+ * ft_strmapi - Applies a function to each character of a string to create 
+ * a new string.
+ * @s: The input string.
+ * @f: The function to apply to each character, 
+ * with the character's index as the first argument.
+ *
+ * The function creates a new string by applying the function 'f' to each 
+ * character of the string 's'. 
+ *
+ * The function 'f' receives two arguments: the current index and 
+ * the character at that index. A new string is allocated to hold the result, 
+ * and the result is null-terminated. 
+ *
+ * If memory allocation fails, the function returns NULL.
+ *
+ * Return: A pointer to the newly created string,
+ * or NULL if memory allocation fails.
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t		i;

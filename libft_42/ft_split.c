@@ -12,11 +12,24 @@
 
 #include "libft.h"
 
-static int	n_palavras(const char *s, char c);
-static int	n_letras(const char *s, char c);
-static char	*copiar_palavras(const char *s, int a);
+static int	count_words(const char *s, char c);
+static int	count_letters(const char *s, char c);
+static char	*copy_words(const char *s, int a);
 static char	**free_array(const char **s, int a);
 
+/**
+ * ft_split - Splits a string into an array of words based on a delimiter.
+ * @str: The input string to split.
+ * @c: The delimiter character used to split the words.
+ *
+ * The function splits the input string 'str' into an array of words,
+ * using the character 'c' as a delimiter. It allocates memory for each
+ * word and returns a NULL-terminated array of strings. If memory allocation
+ * fails at any point, it frees the allocated memory and returns NULL.
+ *
+ * Return: A pointer to the NULL-terminated array of words, 
+ * or NULL if memory allocation fails.
+ */
 char	**ft_split(char const *str, char c)
 {
 	int		i;
@@ -25,7 +38,7 @@ char	**ft_split(char const *str, char c)
 	char	**array;
 
 	i = 0;
-	w = n_palavras(str, c);
+	w = count_words(str, c);
 	array = (char **)malloc((sizeof(char *) * (w + 1)));
 	if (!array)
 		return (0);
@@ -33,8 +46,8 @@ char	**ft_split(char const *str, char c)
 	{
 		while (*str == c && *str)
 			str++;
-		l = n_letras(str, c);
-		array[i] = copiar_palavras((const char *)str, l);
+		l = count_letters(str, c);
+		array[i] = copy_words((const char *)str, l);
 		if (!array[i])
 			return (free_array((const char **)array, i));
 		i++;
@@ -45,7 +58,17 @@ char	**ft_split(char const *str, char c)
 	return (array);
 }
 
-static int	n_palavras(const char *s, char c)
+/**
+ * count_words - Counts the number of words in a string separated by a delimiter.
+ * @s: The input string to evaluate.
+ * @c: The delimiter character.
+ *
+ * The function counts how many words (substrings separated by the delimiter 'c')
+ * are present in the string 's'.
+ *
+ * Return: The number of words in the string.
+ */
+static int	count_words(const char *s, char c)
 {
 	int	i;
 	int	w;
@@ -64,7 +87,19 @@ static int	n_palavras(const char *s, char c)
 	return (w);
 }
 
-static int	n_letras(const char *s, char c)
+/**
+ * count_letters - Counts the number of letters in a word until 
+ * a delimiter is encountered.
+ * @s: The input string to evaluate.
+ * @c: The delimiter character.
+ *
+ * The function counts how many characters (letters) are in the next word,
+ * which is defined as the substring before 
+ * the next occurrence of the delimiter 'c'.
+ *
+ * Return: The number of letters in the word.
+ */
+static int	count_letters(const char *s, char c)
 {
 	int	i;
 	int	qt_letras;
@@ -81,7 +116,18 @@ static int	n_letras(const char *s, char c)
 	return (qt_letras);
 }
 
-static char	*copiar_palavras(const char *s, int a)
+/**
+ * copy_words - Copies a word from the string into a newly allocated string.
+ * @s: The input string containing the word.
+ * @a: The length of the word to copy.
+ *
+ * The function allocates memory and copies 'a' characters from the string 's'
+ * into a new string. The resulting string is null-terminated.
+ *
+ * Return: A pointer to the newly allocated string, 
+ * or NULL if memory allocation fails.
+ */
+static char	*copy_words(const char *s, int a)
 {
 	int		i;
 	char	*to_array;
@@ -99,6 +145,17 @@ static char	*copiar_palavras(const char *s, int a)
 	return (to_array);
 }
 
+/**
+ * free_array - Frees an array of strings in case of failure.
+ * @s: The array of strings to free.
+ * @a: The number of words to free.
+ *
+ * The function frees all allocated memory for the words stored in the array
+ * up to index 'a', and then frees the array itself. 
+ * This is used to clean up when an error occurs during memory allocation.
+ *
+ * Return: Always returns NULL to indicate an error.
+ */
 static char	**free_array(const char **s, int a)
 {
 	while (a > 0)
@@ -109,15 +166,3 @@ static char	**free_array(const char **s, int a)
 	free(s);
 	return (NULL);
 }
-
-// int main (int ac, char **av)
-// {
-// 	(void)ac;
-// 	int i = 0;
-// 	const char *str = av[1];
-// 	char *c = av[2];
-// 	char **matrix;
-// 	matrix = ft_split(str, c[0]);
-// 	while (matrix[i])
-// 		printf("%s\n", matrix[i++]);
-// 	return (0);

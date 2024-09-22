@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+/**
+ * ft_substr - Extracts a substring from a string.
+ * @s: The input string from which to extract the substring.
+ * @start: The starting index of the substring in the input string.
+ * @len: The maximum length of the substring to extract.
+ *
+ * The function creates a new string that is a substring of 's', starting at the
+ * index 'start' and of length 'len'. If 'start' is beyond the length 
+ * of the string,
+ * it returns an empty string. The function ensures that the returned substring
+ * is null-terminated. If memory allocation fails, the function returns NULL.
+ *
+ * Return: A pointer to the newly allocated substring, 
+ * or NULL if memory allocation fails.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t			i;
@@ -34,13 +49,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = 0;
 	return ((char *)str);
 }
-
-// int	main(void)
-// {
-// 	char	str[] = "abcdef";
-// 	char	str2[] = "***189543***";
-// 	printf("%s\n", ft_substr(str, 2, 3));
-// 	printf("%s\n", ft_substr(str, 5, 10));
-// 	printf("%s\n", ft_substr(str2, 4, 6));
-// 	return (0);
-// }
