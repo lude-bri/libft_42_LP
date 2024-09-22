@@ -16,6 +16,20 @@ static char		*get_left(char *str);
 static char		*line_to_clean(char *line);
 static char		*fill_line(int fd, char *line);
 
+/**
+ * get_next_line - Reads a line from a file descriptor.
+ * @fd: The file descriptor to read from.
+ *
+ * This function reads a line from the file descriptor 'fd'. 
+ * It uses static memory to store any leftover data between calls. 
+ * The function returns the next line from the file, including the newline 
+ * character if present. 
+ * 
+ * If the end of the file is reached, it returns NULL.
+ *
+ * Return: A string containing the next line, 
+ * or NULL if an error occurs or the end of the file is reached.
+ */
 char	*get_next_line(int fd)
 {
 	static char		*line;
@@ -36,6 +50,20 @@ char	*get_next_line(int fd)
 	return (new_line);
 }
 
+/**
+ * fill_line - Reads data from a file descriptor and appends it 
+ * to the existing buffer.
+ * @fd: The file descriptor to read from.
+ * @line: The existing buffer where data is stored.
+ *
+ * This helper function reads data from the file descriptor 'fd' 
+ * in chunks defined by BUFFER_SIZE. 
+ * The data is appended to the buffer 'line' until a newline character
+ * is encountered or the end of the file is reached. 
+ * It returns the updated buffer.
+ *
+ * Return: A pointer to the updated buffer, or NULL if an error occurs.
+ */
 static char	*fill_line(int fd, char *line)
 {
 	char	*buffer;
@@ -57,6 +85,19 @@ static char	*fill_line(int fd, char *line)
 	return (line);
 }
 
+/**
+ * line_to_clean - Extracts the current line from the buffer up to 
+ * the newline or end of string.
+ * @line: The buffer containing the data read so far.
+ *
+ * This function extracts the current line from the buffer, 
+ * stopping at the newline character or the end of the string. 
+ * It allocates memory for the new line, copies
+ * the characters, and ensures the result is null-terminated.
+ *
+ * Return: A pointer to the newly allocated string containing the line,
+ * or NULL if allocation fails.
+ */
 static char	*line_to_clean(char *line)
 {
 	char	*new_line;
@@ -85,6 +126,18 @@ static char	*line_to_clean(char *line)
 	return (new_line);
 }
 
+/**
+ * get_left - Keeps the leftover part of the buffer after 
+ * the newline for the next read.
+ * @line: The buffer containing the data read so far.
+ *
+ * This function extracts the remaining part of the buffer
+ * after the first newline.
+ * It allocates memory for the leftover data and frees the original buffer.
+ *
+ * Return: A pointer to the leftover part of the buffer,
+ * or NULL if there is no leftover.
+ */
 static char	*get_left(char *line)
 {
 	char	*rest;
