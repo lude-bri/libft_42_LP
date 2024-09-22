@@ -12,6 +12,17 @@
 
 #include "libft.h"
 
+/**
+ * ft_calloc - Allocates memory for an array and initializes it to zero.
+ * @nmemb: The number of elements in the array.
+ * @size: The size of each element in bytes.
+ *
+ * The function allocates memory for an array of 'nmemb' elements, each
+ * of 'size' bytes, using malloc. If memory allocation fails, it returns NULL.
+ * After allocation, the memory is set to zero using ft_bzero.
+ *
+ * Return: A pointer to the allocated memory, or NULL if the allocation fails.
+ */
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char		*tmp;

@@ -17,7 +17,7 @@ int	ft_puthexlong(int long n);
 int	ft_putptr(long int n)
 {
 	int	count;
-	
+
 	count = 0;
 	write (1, "0x", 2);
 	count += ft_puthexlong(n);

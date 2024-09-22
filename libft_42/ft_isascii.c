@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/**
+ * ft_isascii - Checks if a character is part of the ASCII set.
+ * @c: The character to check.
+ *
+ * The function checks whether the input character is a valid ASCII character.
+ * ASCII characters have values ranging from 0 to 127. If the character falls
+ * within this range, the function returns 1; otherwise, it returns 0.
+ *
+ * Return: 1 if the character is a valid ASCII character, 0 otherwise.
+ */
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)

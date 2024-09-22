@@ -91,7 +91,6 @@ char	*ft_strncat(char *dest, char *src, unsigned int n);
 char	*ft_strjoin_gnl(char *txt, char *buff);
 char	*ft_strchr_gnl(char *txt, int c);
 size_t	ft_strlen_gnl(char *s);
-char    *get_next_line(int fd);
-
+char	*get_next_line(int fd);
 
 #endif
