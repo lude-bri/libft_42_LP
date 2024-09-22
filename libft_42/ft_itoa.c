@@ -14,6 +14,20 @@
 
 static int	n_len(int n);
 
+/**
+ * ft_itoa - Converts an integer to a string.
+ * @n: The integer to convert.
+ *
+ * The function converts an integer to its string representation.
+ * It handles negative numbers by placing a '-' sign at 
+ * the start of the string.
+ * It uses dynamic memory allocation, so the caller must 
+ * free the allocated memory.
+ * If the input number is 0, the string "0" is returned.
+ *
+ * Return: A pointer to the null-terminated string representing the integer.
+ *         Returns NULL if memory allocation fails.
+ */
 char	*ft_itoa(int n)
 {
 	int		i;
@@ -41,6 +55,15 @@ char	*ft_itoa(int n)
 	return (str_convert);
 }
 
+/**
+ * n_len - Returns the length of the string representation of a number.
+ * @n: The number to evaluate.
+ *
+ * This helper function calculates how many characters are needed to represent
+ * the given integer, including the negative sign if the number is negative.
+ *
+ * Return: The length of the number in string form.
+ */
 static int	n_len(int n)
 {
 	int	i;
@@ -55,14 +78,3 @@ static int	n_len(int n)
 	}
 	return (i);
 }
-
-// int	main(void)
-// {
-// 	printf("%s\n", ft_itoa(-623));
-// 	//printf("%s\n", itoa(-623));
-// 	printf("%s\n", ft_itoa(156));
-// 	//printf("%s\n", itoa(156));
-// 	printf("%s\n", ft_itoa(-0));
-// 	//printf("%s\n", itoa(-0));
-// 	return(0);
-// }

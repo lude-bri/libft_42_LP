@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/**
+ * ft_lstlast - Returns the last element of a linked list.
+ * @lst: The first element of the list.
+ *
+ * The function iterates through the linked list to find and return 
+ * the last element.
+ * If the list is empty (i.e., 'lst' is NULL), it returns NULL.
+ *
+ * Return: The last element of the list, or NULL if the list is empty.
+ */
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
