@@ -12,6 +12,18 @@
 
 #include "libft.h"
 
+/**
+ * ft_memset - Fills a memory area with a specified byte.
+ * @s: The pointer to the memory area to fill.
+ * @c: The byte value to set (converted to unsigned char).
+ * @n: The number of bytes to fill.
+ *
+ * The function fills the first 'n' bytes of the memory area pointed to by 's'
+ * with the constant byte 'c' (converted to an unsigned char). It is typically
+ * used to initialize a block of memory.
+ *
+ * Return: A pointer to the memory area 's'.
+ */
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;

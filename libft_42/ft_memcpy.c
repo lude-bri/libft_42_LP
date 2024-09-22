@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+/**
+ * ft_memcpy - Copies memory from one area to another.
+ * @dest: The destination memory area where bytes will be copied to.
+ * @src: The source memory area from where bytes will be copied.
+ * @n: The number of bytes to copy.
+ *
+ * The function copies 'n' bytes from the memory area 'src' 
+ * to the memory area 'dest'.
+ * The two memory areas must not overlap. If either 'dest' or 'src' is NULL, the
+ * function returns NULL. 
+ * After copying, the destination pointer 'dest' is returned.
+ *
+ * Return: A pointer to the destination memory area 'dest', 
+ * or NULL if both pointers are NULL.
+ */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;

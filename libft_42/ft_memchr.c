@@ -12,6 +12,19 @@
 
 #include "libft.h"
 
+/**
+ * ft_memchr - Locates the first occurrence of a byte in a memory area.
+ * @s: The pointer to the memory area to search.
+ * @c: The byte value to locate (interpreted as an unsigned char).
+ * @n: The number of bytes to search.
+ *
+ * The function searches the first 'n' bytes of the memory area pointed to by 's'
+ * for the first occurrence of the byte 'c'. If the byte is found, a pointer to
+ * the matching byte is returned. If the byte is not found within 'n' bytes, the
+ * function returns NULL.
+ *
+ * Return: A pointer to the matching byte, or NULL if the byte is not found.
+ */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
@@ -27,19 +40,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-// int	main(void)
-// {
-// 	// char	str[] = "/|\x12\xff\x09\0\x42\042\0\42|\\";
-// 	char s[] = {0, 1, 2 ,3 ,4 ,5};
-// 	//int	size = 12;
-// 	// printf("%s\n", (char *)ft_memchr(str, '\0', size));
-// 	// printf("%s\n", (char *)memchr(str, '\0', size));
-// 	// printf("%s\n", (char *)memchr(str, '\0', size));
-// 	printf("%s\n", (char *)ft_memchr(s, 0, 1));
-// 	printf("%s\n", (char *)memchr(s, 0, 1));
-// 	printf("%s\n", (char *)ft_memchr(s, 2, 3));
-// 	printf("%s\n", (char *)memchr(s, 2, 3));
-// 	printf("%s\n", (char *)ft_memchr(s, 2 + 256, 3));
-// 	printf("%s\n", (char *)memchr(s, 2 + 256, 3));
-// 	return (0);
-// }
