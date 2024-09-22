@@ -12,6 +12,17 @@
 
 #include "libft.h"
 
+/**
+ * ft_putendl_fd - Writes a string to a specified file descriptor, 
+ * followed by a newline.
+ * @s: The string to print.
+ * @fd: The file descriptor to write to.
+ *
+ * The function writes the given string 's' to the file descriptor 'fd', followed
+ * by a newline character ('\n'). This is useful for printing a string 
+ * with a newline to a specific output, such as standard output, 
+ * standard error, or a file.
+ */
 void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;

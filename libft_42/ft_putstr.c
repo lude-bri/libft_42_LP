@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/**
+ * ft_putstr - Writes a string to the standard output.
+ * @s: The string to print.
+ *
+ * The function writes the string 's' to the standard output (file descriptor 1).
+ * It iterates through each character of the string and prints it.
+ *
+ * Return: The number of characters printed (i.e., the length of the string).
+ */
 int	ft_putstr(char *s)
 {
 	int	i;

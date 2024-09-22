@@ -12,6 +12,18 @@
 
 #include "libft.h"
 
+/**
+ * ft_putnbr - Prints an integer to the standard output.
+ * @n: The integer to print.
+ *
+ * The function prints the integer 'n' to the standard output. 
+ * It handles negative numbers by printing the '-' sign and 
+ * recursively printing the absolute value
+ * of the integer. Special handling is provided for the minimum value of a 32-bit
+ * signed integer since its absolute value exceeds the positive range.
+ *
+ * Return: The number of characters printed (including digits and signs).
+ */
 int	ft_putnbr(int n)
 {
 	char	c;

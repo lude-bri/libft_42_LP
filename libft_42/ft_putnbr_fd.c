@@ -12,6 +12,17 @@
 
 #include "libft.h"
 
+/**
+ * ft_putnbr_fd - Writes an integer to a specified file descriptor.
+ * @n: The integer to print.
+ * @fd: The file descriptor to write to.
+ *
+ * The function writes the integer 'n' to the file descriptor 'fd'. It handles
+ * negative numbers by printing the '-' sign and recursively printing 
+ * the absolute value of the integer. Special handling is provided 
+ * for the minimum value of a 32-bit signed integer, 
+ * as its absolute value exceeds the positive range.
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
