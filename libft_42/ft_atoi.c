@@ -12,6 +12,17 @@
 
 #include "libft.h"
 
+/**
+ * ft_atoi - Converts a string to an integer.
+ * @nprt: The string to convert.
+ *
+ * The function skips any leading whitespace characters (spaces, tabs, etc.)
+ * Processes an optional sign ('+' or '-') to determine the number's sign.
+ * Iterates through the numeric characters, converting them to an integer.
+ *
+ * Return: The integer representation of the string.
+ *         The result will be negative if the input contains a '-' sign.
+ */
 int	ft_atoi(const char *nprt)
 {
 	int	i;
@@ -36,16 +47,3 @@ int	ft_atoi(const char *nprt)
 	}
 	return (result * sign);
 }
-// int	main(void)
-// {
-// 	char	s[] = "\e475";
-// 	char	s1[] = "-3423523";
-// 	char	s2[] = "+-+--1315";
-// 	printf("%d\n", ft_atoi(s));
-// 	printf("%d\n", atoi(s));
-// 	printf("%d\n", ft_atoi(s1));
-// 	printf("%d\n", atoi(s1));
-// 	printf("%d\n", ft_atoi(s2));
-// 	printf("%d\n", atoi(s2));
-// 	return (0);
-// }
