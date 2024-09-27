@@ -59,8 +59,8 @@ char	*fill_line(int fd, char *raw)
 			return (NULL);
 		}
 		buffer[bytes_read] = '\0';
-		raw = ft_strjoin(raw, buffer);
-		if (ft_strchr(raw, '\n'))
+		raw = ft_strjoin_gnl(raw, buffer);
+		if (ft_strchr_gnl(raw, '\n'))
 			break ;
 	}
 	free(buffer);
