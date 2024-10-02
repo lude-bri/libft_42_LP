@@ -32,6 +32,8 @@ int	ft_atoi(const char *nprt)
 	i = 0;
 	sign = 1;
 	result = 0;
+	if (nprt[i] == '\n')
+		return (0);
 	while ((nprt[i] == 32) || (nprt[i] >= 9 && nprt[i] <= 13))
 		i++;
 	if (nprt[i] == '+' || nprt[i] == '-')
