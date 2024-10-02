@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/**
+ * ft_putudec - Prints an unsigned integer to the standard output.
+ * @n: The unsigned integer to print.
+ *
+ * The function prints the unsigned integer 'n' to the standard output. 
+ * It recursively handles larger numbers by dividing them into digits 
+ * and printing each digit as a character.
+ *
+ * Return: The number of characters printed.
+ */
 int	ft_putudec(unsigned int n)
 {
 	char	c;
