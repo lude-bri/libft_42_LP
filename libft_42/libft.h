@@ -6,7 +6,7 @@
 /*   By: Luigi <Luigi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:23:00 by lude-bri          #+#    #+#             */
-/*   Updated: 2024/10/25 11:30:34 by luigi            ###   ########.fr       */
+/*   Updated: 2024/10/25 13:34:00 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,8 @@ int		ft_puthexlong(int long n);
 int		ft_putstr(char *s);
 int		ft_putudec(unsigned int n);
 int		ft_abs(int n);
-int ft_strcmp(const char *s1, const char *s2);
+int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_strjoin_free(char *s1, char *s2, int to_free);
 char	*ft_strncat(char *dest, char *src, unsigned int n);
 char	*ft_strjoin_gnl(char *txt, char *buff);
 char	*ft_strchr_gnl(char *txt, int c);
