@@ -6,24 +6,24 @@
 /*   By: lude-bri <lude-bri@42student.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 08:17:29 by lude-bri          #+#    #+#             */
-/*   Updated: 2024/04/27 08:40:58 by lude-bri         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:43:57 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * ft_lstadd_back - Adds a new element at the end of a linked list.
+ * ft_lstadd_back - Adds a new_list element at the end of a linked list.
  * @lst: A pointer to the first element of the list.
- * @new: The new element to be added to the list.
+ * @new_list: The new_list element to be added to the list.
  *
- * The function adds the new element 'new' to the end of the linked list.
- * If the list is empty (*lst is NULL), the new element becomes 
+ * The function adds the new_list element 'new_list' to the end of the linked list.
+ * If the list is empty (*lst is NULL), the new_list element becomes 
  * the first element.
  * Otherwise, the function traverses the list to find 
- * the last element and attaches the new element to the end of the list.
+ * the last element and attaches the new_list element to the end of the list.
  */
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new_list)
 {
 	t_list	*last;
 
@@ -32,8 +32,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	if (!*lst)
 	{
-		*lst = new;
+		*lst = new_list;
 		return ;
 	}
-	last->next = new;
+	last->next = new_list;
 }

@@ -6,7 +6,7 @@
 /*   By: Luigi <Luigi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:23:00 by lude-bri          #+#    #+#             */
-/*   Updated: 2024/10/25 13:45:15 by luigi            ###   ########.fr       */
+/*   Updated: 2024/10/31 15:43:02 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,10 @@ char	**ft_split(char const *s, char c);
 
 //bonus
 t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new_list);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new_list);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
@@ -88,6 +88,7 @@ int		ft_putstr(char *s);
 int		ft_putudec(unsigned int n);
 int		ft_abs(int n);
 int		ft_strcmp(const char *s1, const char *s2);
+int		ft_matrixlen(char **matrix);
 char	*ft_strjoin_free(char *s1, char *s2, int to_free);
 char	*ft_strncat(char *dest, char *src, unsigned int n);
 char	*ft_strjoin_gnl(char *txt, char *buff);
