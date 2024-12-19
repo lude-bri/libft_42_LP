@@ -6,7 +6,7 @@
 /*   By: Luigi <Luigi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:23:00 by lude-bri          #+#    #+#             */
-/*   Updated: 2024/10/31 15:43:02 by luigi            ###   ########.fr       */
+/*   Updated: 2024/12/19 10:22:01 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,21 @@ int		ft_putudec(unsigned int n);
 int		ft_abs(int n);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_matrixlen(char **matrix);
+int		ft_numlen(int n, int base);
+int		ft_unumlen(unsigned int n, int base);
+int		ft_uputnbr(unsigned int n);
+char	*ft_uitoa(unsigned int n);
 char	*ft_strjoin_free(char *s1, char *s2, int to_free);
 char	*ft_strncat(char *dest, char *src, unsigned int n);
 char	*ft_strjoin_gnl(char *txt, char *buff);
 char	*ft_strchr_gnl(char *txt, int c);
+
+
+
 size_t	ft_strlen_gnl(char *s);
 char	*get_next_line(int fd);
+
+
+
 
 #endif
