@@ -25,7 +25,9 @@ SRC =	$(addprefix $(LIBFT_PATH)/, ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 		ft_putptr.c ft_putstr.c ft_putudec.c ft_abs.c ft_strncat.c \
 		get_next_line.c get_next_line_utils.c ft_strjoin_free.c ft_matrixlen.c \
 		ft_unumlen.c ft_uputnbr.c ft_uitoa.c ft_fprintf.c ft_fprintf_u.c \
-		ft_fprintf_s.c ft_fprintf_p.c ft_fprintf_hex.c ft_xtoa.c)
+		ft_fprintf_s.c ft_fprintf_p.c ft_fprintf_hex.c ft_xtoa.c ft_dtoa.c \
+		ft_fflags.c ft_fflags_utils.c ft_fparse.c ft_fprintf_c.c ft_fprintf_di.c \
+		ft_fprintf_f.c ft_pow.c)
 
 BONUS = $(addprefix $(LIBFT_PATH)/, ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \

@@ -24,7 +24,7 @@ SRCS_FILES = ft_isalpha.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c \
 	ft_itoa.c ft_split.c ft_abs.c ft_strcmp.c ft_strncat.c get_next_line.c \
 	get_next_line_utils.c ft_strjoin_free.c ft_matrixlen.c ft_numlen.c \
 	ft_unumlen.c ft_uputnbr.c ft_uitoa.c ft_fprintf.c ft_fprintf_u.c \
-	ft_fprintf_s.c ft_fprintf_p. ft_fprintf_hex.c ft_xtoa.c \
+	ft_fprintf_s.c ft_fprintf_p. ft_fprintf_hex.c ft_xtoa.c ft_dtoa.c \
 
 
 BONUS_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \

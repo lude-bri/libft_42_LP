@@ -17,10 +17,13 @@
 #  define BUFFER_SIZE 1024
 # endif
 
+# define PRECISION	6
+
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+
 
 typedef struct s_list
 {
@@ -59,8 +62,8 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
+int		ft_putchar_fd(char c, int fd);
+int		ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_itoa(int n);
@@ -93,15 +96,15 @@ int		ft_numlen(int n, int base);
 int		ft_unumlen(unsigned int n, int base);
 int		ft_uputnbr(unsigned int n);
 int		ft_putstrn_fd(char *str, int fd, int n);
+int		ft_putnchar_fd(char c, int fd, int n);
 char	*ft_xtoa(unsigned long int nb, int is_upper);
-
+char	*ft_dtoa(double d);
 char	*ft_uitoa(unsigned int n);
 char	*ft_strjoin_free(char *s1, char *s2, int to_free);
 char	*ft_strncat(char *dest, char *src, unsigned int n);
 char	*ft_strjoin_gnl(char *txt, char *buff);
 char	*ft_strchr_gnl(char *txt, int c);
-
-
+double	ft_pow(double base, double exp);
 
 size_t	ft_strlen_gnl(char *s);
 char	*get_next_line(int fd);
