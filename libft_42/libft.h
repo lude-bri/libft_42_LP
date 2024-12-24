@@ -6,7 +6,7 @@
 /*   By: Luigi <Luigi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:23:00 by lude-bri          #+#    #+#             */
-/*   Updated: 2024/12/19 10:22:01 by luigi            ###   ########.fr       */
+/*   Updated: 2024/12/24 12:32:16 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
-
 
 typedef struct s_list
 {
@@ -108,8 +107,5 @@ double	ft_pow(double base, double exp);
 
 size_t	ft_strlen_gnl(char *s);
 char	*get_next_line(int fd);
-
-
-
 
 #endif

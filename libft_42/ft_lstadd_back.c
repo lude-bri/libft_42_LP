@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@42student.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 08:17:29 by lude-bri          #+#    #+#             */
-/*   Updated: 2024/10/31 15:43:57 by luigi            ###   ########.fr       */
+/*   Updated: 2024/12/24 12:31:19 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
  * @lst: A pointer to the first element of the list.
  * @new_list: The new_list element to be added to the list.
  *
- * The function adds the new_list element 'new_list' to the end of the linked list.
+ * The function adds the new_list element 'new_list' 
+ * to the end of the linked list.
  * If the list is empty (*lst is NULL), the new_list element becomes 
  * the first element.
  * Otherwise, the function traverses the list to find 
