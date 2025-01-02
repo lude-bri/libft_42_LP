@@ -6,7 +6,7 @@
 #    By: lude-bri <lude-bri@42student.fr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 16:21:50 by lude-bri          #+#    #+#              #
-#    Updated: 2024/12/19 10:23:51 by luigi            ###   ########.fr        #
+#    Updated: 2025/01/02 13:16:16 by luigi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRCS_FILES = ft_isalpha.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c \
 	ft_itoa.c ft_split.c ft_abs.c ft_strcmp.c ft_strncat.c get_next_line.c \
 	get_next_line_utils.c ft_strjoin_free.c ft_matrixlen.c ft_numlen.c \
 	ft_unumlen.c ft_uputnbr.c ft_uitoa.c ft_fprintf.c ft_fprintf_u.c \
-	ft_fprintf_s.c ft_fprintf_p. ft_fprintf_hex.c ft_xtoa.c ft_dtoa.c \
+	ft_fprintf_s.c ft_fprintf_p. ft_fprintf_hex.c ft_xtoa.c ft_dtoa.c ft_atoll.c \
+
 
 
 BONUS_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \

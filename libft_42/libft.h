@@ -6,7 +6,7 @@
 /*   By: Luigi <Luigi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:23:00 by lude-bri          #+#    #+#             */
-/*   Updated: 2024/12/24 12:32:16 by luigi            ###   ########.fr       */
+/*   Updated: 2025/01/02 13:15:01 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -80,32 +81,33 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 //plus
-int		ft_putchar(char c);
-int		ft_printf(const char *s, ...);
-int		ft_puthex(char str, unsigned int n);
-int		ft_putnbr(int n);
-int		ft_putptr(long int n);
-int		ft_puthexlong(int long n);
-int		ft_putstr(char *s);
-int		ft_putudec(unsigned int n);
-int		ft_abs(int n);
-int		ft_strcmp(const char *s1, const char *s2);
-int		ft_matrixlen(char **matrix);
-int		ft_numlen(int n, int base);
-int		ft_unumlen(unsigned int n, int base);
-int		ft_uputnbr(unsigned int n);
-int		ft_putstrn_fd(char *str, int fd, int n);
-int		ft_putnchar_fd(char c, int fd, int n);
-char	*ft_xtoa(unsigned long int nb, int is_upper);
-char	*ft_dtoa(double d);
-char	*ft_uitoa(unsigned int n);
-char	*ft_strjoin_free(char *s1, char *s2, int to_free);
-char	*ft_strncat(char *dest, char *src, unsigned int n);
-char	*ft_strjoin_gnl(char *txt, char *buff);
-char	*ft_strchr_gnl(char *txt, int c);
-double	ft_pow(double base, double exp);
+int			ft_putchar(char c);
+int			ft_printf(const char *s, ...);
+int			ft_puthex(char str, unsigned int n);
+int			ft_putnbr(int n);
+int			ft_putptr(long int n);
+int			ft_puthexlong(int long n);
+int			ft_putstr(char *s);
+int			ft_putudec(unsigned int n);
+int			ft_abs(int n);
+int			ft_strcmp(const char *s1, const char *s2);
+int			ft_matrixlen(char **matrix);
+int			ft_numlen(int n, int base);
+int			ft_unumlen(unsigned int n, int base);
+int			ft_uputnbr(unsigned int n);
+int			ft_putstrn_fd(char *str, int fd, int n);
+int			ft_putnchar_fd(char c, int fd, int n);
+char		*ft_xtoa(unsigned long int nb, int is_upper);
+char		*ft_dtoa(double d);
+char		*ft_uitoa(unsigned int n);
+char		*ft_strjoin_free(char *s1, char *s2, int to_free);
+char		*ft_strncat(char *dest, char *src, unsigned int n);
+char		*ft_strjoin_gnl(char *txt, char *buff);
+char		*ft_strchr_gnl(char *txt, int c);
+double		ft_pow(double base, double exp);
+long long	ft_atoll(const char *nprt);
 
-size_t	ft_strlen_gnl(char *s);
-char	*get_next_line(int fd);
+size_t		ft_strlen_gnl(char *s);
+char		*get_next_line(int fd);
 
 #endif

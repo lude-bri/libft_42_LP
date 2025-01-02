@@ -6,7 +6,7 @@
 #    By: lude-bri <lude-bri@42student.fr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 16:21:50 by lude-bri          #+#    #+#              #
-#    Updated: 2024/12/19 11:17:42 by luigi            ###   ########.fr        #
+#    Updated: 2025/01/02 13:15:37 by luigi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC =	$(addprefix $(LIBFT_PATH)/, ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 		ft_unumlen.c ft_uputnbr.c ft_uitoa.c ft_fprintf.c ft_fprintf_u.c \
 		ft_fprintf_s.c ft_fprintf_p.c ft_fprintf_hex.c ft_xtoa.c ft_dtoa.c \
 		ft_fflags.c ft_fflags_utils.c ft_fparse.c ft_fprintf_c.c ft_fprintf_di.c \
-		ft_fprintf_f.c ft_pow.c ft_putstrn_fd.c)
+		ft_fprintf_f.c ft_pow.c ft_putstrn_fd.c ft_atoll.c)
 
 BONUS = $(addprefix $(LIBFT_PATH)/, ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
